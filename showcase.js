@@ -315,7 +315,7 @@ const COMPONENTS = [
     defaultValues: {
       content: `
   <ui-button slot="trigger">Click me</ui-button>
-  <div style="padding: 8px; background: white; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <div>
     <div style="padding: 8px; cursor: pointer;">Menu Item 1</div>
     <div style="padding: 8px; cursor: pointer;">Menu Item 2</div>
     <div style="padding: 8px; cursor: pointer;">Menu Item 3</div>
@@ -530,7 +530,7 @@ const COMPONENTS = [
         
         <ui-drawer id="demo-drawer" title="Drawer Title" placement="right">
           <p style="padding: 1rem;">This is the drawer content.</p>
-          <div slot="footer" style="padding: 1rem; border-top: 1px solid #eee; display: flex; justify-content: flex-end; gap: 8px;">
+          <div slot="footer" style="display: flex; justify-content: flex-end; gap: 8px;">
             <ui-button variant="secondary" onclick="closeDrawer()">Cancel</ui-button>
             <ui-button onclick="closeDrawer()">Confirm</ui-button>
           </div>
@@ -553,7 +553,7 @@ const COMPONENTS = [
         
         <ui-modal id="demo-modal" title="Modal Title" width="500px">
           <p style="padding: 1rem;">This is the modal content.</p>
-          <div slot="footer" style="padding: 1rem; border-top: 1px solid #eee; display: flex; justify-content: flex-end; gap: 8px;">
+          <div slot="footer" style="display: flex; justify-content: flex-end; gap: 8px;">
             <ui-button variant="secondary" onclick="closeModal()">Cancel</ui-button>
             <ui-button onclick="closeModal()">Confirm</ui-button>
           </div>
@@ -589,8 +589,7 @@ function setActiveComponent(name) {
 function renderShowcase() {
   const container = document.getElementById("showcase-container");
 
-  // Initialize props with defaults if not already set for this component instance
-  // For simplicity, we reset props when switching components
+  // reset props when switching components
   currentProps = {};
   activeComponent.props.forEach((prop) => {
     currentProps[prop.name] = prop.defaultValue;
@@ -658,14 +657,14 @@ function renderControls() {
           <ui-input 
             type="number"
             value="${value}" 
-            oninput="updateProp('${prop.name}', Number(event.detail.value))"
+            oninput="updateProp('${prop.name}', Number(event.target.value))"
           ></ui-input>
         `;
       } else {
         inputHtml = `
           <ui-input 
             value="${value}" 
-            oninput="updateProp('${prop.name}', event.detail.value)"
+            oninput="updateProp('${prop.name}', event.target.value)"
           ></ui-input>
         `;
       }
