@@ -1,0 +1,162 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.card {
+  background-image: linear-gradient(to bottom right, #27272a, #18181b);
+  border-radius: 0.75rem;
+  border: 1px solid #4b5563;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  color: $white;
+
+  // Hover effects
+  &.card--hover {
+    cursor: pointer;
+
+    &:hover {
+      border-color: #6b7280;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      transform: translateY(-0.125rem) scale(1.02);
+    }
+  }
+
+  // Padding variants
+  &--p-md {
+    padding: 1rem;
+  }
+
+  &--p-sm {
+    padding: 1.5rem;
+  }
+
+  &--p-lg {
+    padding: 2rem; // p-8
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+}
+
+// Header Section
+.card__header {
+  margin-bottom: 1.5rem; // mb-6
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+
+  &--center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+// Icon
+.card__icon {
+  border-radius: 0.5rem; // rounded-lg
+  padding: 0.75rem; // p-3
+  transition: all 0.3s;
+  background-color: rgba(59, 130, 246, 0.2); // bg-blue-500/20 default
+  color: #60a5fa; // text-blue-400 default
+  margin-right: 1rem; // mr-4
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &--center {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75rem; // mb-3
+  }
+}
+
+// Title
+.card__title-wrapper {
+  flex: 1;
+
+  &--center {
+    flex: none;
+  }
+}
+
+.card__title {
+  font-weight: 600; // font-semibold
+  color: $white;
+  margin: 0;
+
+  &--sm {
+    font-size: 1.125rem; // text-lg
+  }
+
+  &--md {
+    font-size: 1.25rem; // text-xl
+  }
+
+  &--lg {
+    font-size: 1.5rem; // text-2xl
+  }
+}
+
+// Action
+.card__action {
+  margin-left: 1rem; // ml-4
+}
+
+// Content Section
+.card__content {
+  position: relative;
+  z-index: 2;
+
+  &--spacing > ::slotted(*:not(:last-child)) {
+    margin-bottom: 0.75rem; // space-y-3
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+// Footer Section
+.card__footer {
+  margin-top: 1.5rem; // mt-6
+  position: relative;
+  z-index: 2;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+// Ripple Effect
+.card-ripple::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.2) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-ripple:active::before {
+  width: 200px;
+  height: 200px;
+}

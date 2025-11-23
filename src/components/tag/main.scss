@@ -1,0 +1,63 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: inline-block;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: $border-radius;
+  transition: $transition;
+
+  &--primary {
+    background-color: rgba($blue-600, 0.2);
+    color: $blue-500;
+    border: 1px solid rgba($blue-600, 0.3);
+  }
+
+  &--success {
+    background-color: rgba($green-600, 0.2);
+    color: $green-500;
+    border: 1px solid rgba($green-600, 0.3);
+  }
+
+  &--warning {
+    background-color: rgba($yellow-600, 0.2);
+    color: $yellow-500;
+    border: 1px solid rgba($yellow-600, 0.3);
+  }
+
+  &--danger {
+    background-color: rgba($red-600, 0.2);
+    color: $red-500;
+    border: 1px solid rgba($red-600, 0.3);
+  }
+
+  &--info {
+    background-color: rgba($gray-600, 0.2);
+    color: $text-secondary;
+    border: 1px solid rgba($gray-600, 0.3);
+  }
+}
+
+.tag-close {
+  background: transparent;
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}

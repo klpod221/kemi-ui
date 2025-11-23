@@ -1,0 +1,91 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.datepicker-container {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+
+  .required {
+    color: $red-500;
+  }
+}
+
+.datepicker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid $gray-600;
+  background-color: $bg-secondary;
+  transition: all 0.2s;
+
+  &:hover:not(&--disabled) {
+    border-color: $gray-500;
+  }
+
+  &--focused {
+    border-color: $blue-500;
+    box-shadow: 0 0 0 1px $blue-500;
+  }
+
+  &--error {
+    border-color: $red-500;
+
+    &.datepicker-wrapper--focused {
+      border-color: $red-400;
+      box-shadow: 0 0 0 1px $red-400;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: $gray-900;
+  }
+}
+
+.datepicker-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  color: $text-primary;
+  font-family: inherit;
+  font-size: 0.875rem;
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1); // Invert color for dark mode
+    opacity: 0.6;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.helper-text {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: $text-secondary;
+}
+
+.error-message {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: $red-400;
+}

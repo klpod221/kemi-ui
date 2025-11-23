@@ -1,0 +1,101 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.textarea-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+
+  .required {
+    color: $red-500;
+  }
+}
+
+.textarea {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid $gray-600;
+  background-color: $bg-secondary;
+  color: $text-primary;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: all 0.2s;
+  outline: none;
+  min-height: 2.5rem;
+
+  &::placeholder {
+    color: $text-secondary;
+  }
+
+  &:hover:not(:disabled):not(:read-only) {
+    border-color: $gray-500;
+  }
+
+  &:focus:not(:disabled):not(:read-only) {
+    border-color: $blue-500;
+    box-shadow: 0 0 0 1px $blue-500;
+  }
+
+  &--error {
+    border-color: $red-500;
+
+    &:focus {
+      border-color: $red-400;
+      box-shadow: 0 0 0 1px $red-400;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: $gray-900;
+  }
+
+  &:read-only {
+    cursor: default;
+    background-color: $gray-900;
+    border-color: $border-color;
+  }
+}
+
+.textarea-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0.25rem;
+  gap: 1rem;
+}
+
+.message-wrapper {
+  flex: 1;
+}
+
+.helper-text {
+  font-size: 0.75rem;
+  color: $text-secondary;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: $red-400;
+}
+
+.counter {
+  font-size: 0.75rem;
+  color: $text-secondary;
+  white-space: nowrap;
+  margin-left: auto;
+}

@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-btn {
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  background-color: $bg-secondary;
+  color: $text-primary;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover:not(:disabled) {
+    background-color: $bg-tertiary;
+    color: $text-primary;
+  }
+
+  &.active {
+    background-color: $blue-600;
+    color: $text-primary;
+    border-color: $blue-600;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.pagination-ellipsis {
+  color: $gray-500;
+  padding: 0 0.25rem;
+}

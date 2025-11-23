@@ -1,0 +1,117 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.table-container {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background-color: $bg-secondary;
+}
+
+.table-toolbar {
+  padding: 1rem;
+  border-bottom: 1px solid $gray-700;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    background-color: $bg-secondary;
+    border-bottom: 2px solid $gray-700;
+
+    th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      color: $text-primary;
+      font-size: 0.875rem;
+      user-select: none;
+
+      &.sortable {
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: $bg-tertiary;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $gray-700;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: rgba($gray-700, 0.5);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      color: $text-primary;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-icon {
+  font-size: 0.75rem;
+  color: $gray-500;
+
+  &.active {
+    color: $blue-500;
+  }
+}
+
+.table-footer {
+  padding: 1rem;
+  border-top: 1px solid $gray-700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.page-size-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $text-secondary;
+  font-size: 0.875rem;
+
+  select {
+    padding: 0.25rem 0.5rem;
+    background-color: $bg-tertiary;
+    border: 1px solid $gray-600;
+    border-radius: $border-radius;
+    color: $text-primary;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: $blue-500;
+    }
+  }
+}

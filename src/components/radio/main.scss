@@ -1,0 +1,131 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: inline-block;
+}
+
+.radio-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid $gray-600;
+  background-color: $bg-secondary;
+  transition: all 0.2s;
+  flex-shrink: 0;
+
+  // Sizes
+  &--sm {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &--md {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &--lg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &--focused {
+    border-color: $blue-500;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.radio-inner {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  background-color: $text-primary;
+  transform: scale(0);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.radio-input:checked + .radio .radio-inner {
+  transform: scale(1);
+}
+
+.radio-wrapper:hover:not(:has(.radio--disabled)) .radio {
+  border-color: $gray-500;
+}
+
+.radio-input:checked + .radio {
+  background-color: $blue-600;
+  border-color: $blue-600;
+}
+
+.radio-input:checked + .radio:hover {
+  background-color: $blue-700;
+  border-color: $blue-700;
+}
+
+.radio-label {
+  color: $text-primary;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+
+.radio-wrapper:has(.radio--disabled) .radio-label {
+  color: $gray-500;
+  cursor: not-allowed;
+}
+
+.radio-wrapper:hover:not(:has(.radio--disabled)) .radio-label {
+  color: $text-primary;
+}
+
+.radio-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.group-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.25rem;
+
+  .required {
+    color: $red-500;
+  }
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: $red-500;
+  margin-top: 0.25rem;
+}

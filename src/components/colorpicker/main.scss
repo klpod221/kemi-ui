@@ -1,0 +1,91 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.colorpicker-wrapper {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+
+  .required {
+    color: $red-500;
+  }
+}
+
+.colorpicker-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.colorpicker-swatch {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid $gray-600;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  overflow: hidden;
+
+  &:hover {
+    border-color: $gray-500;
+  }
+}
+
+.colorpicker-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.colorpicker-text {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid $gray-600;
+  background-color: $bg-secondary;
+  color: $text-primary;
+  font-family: monospace;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  outline: none;
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: $text-secondary;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: $gray-500;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $blue-500;
+    box-shadow: 0 0 0 1px $blue-500;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.helper-text {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: $text-secondary;
+}

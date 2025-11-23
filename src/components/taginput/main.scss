@@ -1,0 +1,119 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.taginput-wrapper {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+
+  .required {
+    color: $red-500;
+  }
+}
+
+.taginput-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid $gray-600;
+  background-color: $bg-secondary;
+  cursor: text;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: $gray-500;
+  }
+
+  &--focused {
+    border-color: $blue-500;
+    box-shadow: 0 0 0 1px $blue-500;
+  }
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background-color: $blue-600;
+  color: $text-primary;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.taginput-container--error {
+  border-color: $red-500;
+
+  &:focus-within {
+    border-color: $red-500;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+  }
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: $red-500;
+  margin-top: 0.25rem;
+}
+
+.tag-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: $text-primary;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+
+  &:hover:not(:disabled) {
+    opacity: 1;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+.taginput-input {
+  flex: 1;
+  min-width: 120px;
+  border: none;
+  background: transparent;
+  color: $text-primary;
+  outline: none;
+  font-size: 0.875rem;
+
+  &::placeholder {
+    color: $text-secondary;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.helper-text {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: $text-secondary;
+}

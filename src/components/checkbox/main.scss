@@ -1,0 +1,137 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: inline-block;
+}
+
+.checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  border: 2px solid $gray-600;
+  background-color: $bg-secondary;
+  transition: all 0.2s;
+  flex-shrink: 0;
+
+  svg {
+    color: $text-primary;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.15s;
+  }
+
+  // Sizes
+  &--sm {
+    width: 0.75rem;
+    height: 0.75rem;
+
+    svg {
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+  }
+
+  &--md {
+    width: 1rem;
+    height: 1rem;
+
+    svg {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+
+  &--lg {
+    width: 1.25rem;
+    height: 1.25rem;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &--focused {
+    border-color: $blue-500;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.checkbox-wrapper:hover:not(:has(.checkbox--disabled)) .checkbox {
+  border-color: $gray-500;
+}
+
+.checkbox-input:checked + .checkbox,
+.checkbox-input:indeterminate + .checkbox {
+  background-color: $blue-600;
+  border-color: $blue-600;
+
+  svg {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.checkbox-input:checked + .checkbox:hover,
+.checkbox-input:indeterminate + .checkbox:hover {
+  background-color: $blue-700;
+  border-color: $blue-700;
+}
+
+.checkbox-label {
+  color: $text-primary;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: color 0.2s;
+
+  .required {
+    color: $red-500;
+  }
+}
+
+.checkbox-wrapper:has(.checkbox--disabled) .checkbox-label {
+  color: $gray-500;
+  cursor: not-allowed;
+}
+
+.checkbox-wrapper:hover:not(:has(.checkbox--disabled)) .checkbox-label {
+  color: $text-primary;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox--error {
+  border-color: $red-500;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: $red-500;
+  margin-top: 0.25rem;
+  margin-left: 1.75rem; // Align with label text
+}

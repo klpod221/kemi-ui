@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.breadcrumb-link {
+  color: $text-secondary;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $blue-500;
+  }
+}
+
+.breadcrumb-current {
+  color: $text-primary;
+}
+
+.breadcrumb-separator {
+  color: $gray-600;
+}

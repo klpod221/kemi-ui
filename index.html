@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kemi UI Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./dist/kemi-ui.js"></script>
+    <style>
+      :root {
+        /* Derived from src/styles/variables.scss */
+        --color-primary: #3b82f6; /* $blue-500 */
+        --color-primary-hover: #2563eb; /* $blue-600 */
+
+        --color-bg: #0d0d0d; /* $bg-primary */
+        --color-bg-sidebar: #171717; /* $bg-secondary */
+        --color-bg-block: #1f2937; /* $bg-tertiary */
+        --color-bg-input: #1f2937; /* $input-bg */
+
+        --color-text: #f3f4f6; /* $text-primary */
+        --color-text-secondary: #9ca3af; /* $text-secondary */
+
+        --color-border: #374151; /* $border-color */
+        --color-border-light: #4b5563; /* $border-light */
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        color: var(--color-text);
+        background: var(--color-bg);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        width: 250px;
+        background: var(--color-bg-sidebar);
+        border-right: 1px solid var(--color-border);
+        padding: 2rem 1rem;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .sidebar::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .sidebar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .sidebar::-webkit-scrollbar-thumb {
+        background: var(--color-border);
+        border-radius: 3px;
+      }
+
+      .brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: var(--color-primary);
+        display: block;
+        text-decoration: none;
+      }
+
+      .nav-item {
+        display: block;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.25rem;
+        border-radius: 6px;
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+
+      .nav-item:hover {
+        background: var(--color-bg-block);
+        color: var(--color-text);
+      }
+
+      .nav-item.active {
+        background: rgba(59, 130, 246, 0.1); /* Blue with opacity */
+        color: var(--color-primary);
+        font-weight: 500;
+      }
+
+      .main {
+        margin-left: 250px;
+        padding: 3rem;
+        flex: 1;
+        max-width: 1000px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        color: var(--color-text);
+      }
+
+      .intro {
+        font-size: 1.125rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 3rem;
+        line-height: 1.6;
+      }
+
+      /* Showcase Block Styles */
+      .showcase-block {
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--color-bg-block);
+      }
+
+      .preview {
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(
+          --color-bg
+        ); /* Darker background for preview to make components pop */
+        border-bottom: 1px solid var(--color-border);
+        min-height: 200px;
+        /* Add a subtle pattern or grid if desired, but keeping it simple for now */
+        background-image: radial-gradient(
+          var(--color-border) 1px,
+          transparent 1px
+        );
+        background-size: 20px 20px;
+      }
+
+      .controls {
+        padding: 2rem;
+        background: var(--color-bg-block);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .controls h3 {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.125rem;
+        color: var(--color-text);
+      }
+
+      .control-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .control-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .control-item label {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-text-secondary);
+      }
+
+      .control-item input[type="text"],
+      .control-item input[type="number"],
+      .control-item select {
+        padding: 0.5rem;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        font-size: 0.875rem;
+        color: var(--color-text);
+      }
+
+      .control-item input:focus,
+      .control-item select:focus {
+        outline: none;
+        border-color: var(--color-primary);
+      }
+
+      .control-item input[type="checkbox"] {
+        width: 1.25rem;
+        height: 1.25rem;
+        accent-color: var(--color-primary);
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+      }
+
+      .code-block {
+        padding: 1.5rem;
+        background: #000000;
+        color: #e5e7eb;
+        overflow-x: auto;
+        font-family: "Menlo", "Monaco", "Courier New", monospace;
+        font-size: 0.875rem;
+        margin: 0;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="sidebar" id="sidebar">
+      <a href="#" class="brand">Kemi UI</a>
+      <div id="nav-links"></div>
+    </nav>
+
+    <main class="main">
+      <h1>Component Showcase</h1>
+      <p class="intro">
+        Explore the Kemi UI component library. Interact with the components
+        below to see how they behave and copy the code snippets to use them in
+        your project.
+      </p>
+      <div id="showcase-container"></div>
+    </main>
+
+    <script type="module" src="/showcase.js"></script>
+  </body>
+</html>

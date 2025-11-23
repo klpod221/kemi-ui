@@ -1,0 +1,58 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: inline-block;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: $bg-secondary;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 150px;
+  animation: fadeSlideDown 0.2s ease;
+
+  &--bottom-start {
+    top: calc(100% + 4px);
+    left: 0;
+  }
+
+  &--bottom-end {
+    top: calc(100% + 4px);
+    right: 0;
+  }
+
+  &--top-start {
+    bottom: calc(100% + 4px);
+    left: 0;
+  }
+
+  &--top-end {
+    bottom: calc(100% + 4px);
+    right: 0;
+  }
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,58 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+}
+
+.skeleton-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    $gray-800 0%,
+    $gray-700 50%,
+    $gray-800 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: $border-radius;
+
+  &--text {
+    height: 1rem;
+    border-radius: 0.25rem;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    aspect-ratio: 1;
+  }
+
+  &--rectangle {
+    min-height: 100px;
+  }
+}
+
+.skeleton-list-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.skeleton-list-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
