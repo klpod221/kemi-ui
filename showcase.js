@@ -203,15 +203,6 @@ const COMPONENTS = [
     },
   },
   {
-    name: "ui-divider",
-    description: "A visual separator between content.",
-    props: [
-      { name: "orientation", type: "select", options: ["horizontal", "vertical"], defaultValue: "horizontal" },
-      { name: "label", type: "string", defaultValue: "" },
-    ],
-    defaultValues: {},
-  },
-  {
     name: "ui-slider",
     description: "A range slider input component.",
     props: [
