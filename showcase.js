@@ -36,6 +36,7 @@ const COMPONENTS = [
   // === FORM INPUTS ===
   {
     name: "ui-input",
+    description: "A versatile input component for text, numbers, and other data types.",
     props: [
       { name: "label", type: "string", defaultValue: "Label" },
       {
@@ -75,6 +76,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-textarea",
+    description: "A multi-line text input component.",
     props: [
       { name: "label", type: "string", defaultValue: "Textarea Label" },
       {
@@ -94,6 +96,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-checkbox",
+    description: "A checkbox component for boolean selection.",
     props: [
       { name: "label", type: "string", defaultValue: "Checkbox Label" },
       { name: "checked", type: "boolean", defaultValue: false },
@@ -111,6 +114,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-checkbox-group",
+    description: "A group of checkboxes for multiple selections.",
     props: [
       { name: "label", type: "string", defaultValue: "Select Options" },
       { name: "name", type: "string", defaultValue: "options" },
@@ -126,6 +130,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-radio",
+    description: "A radio button component for single selection.",
     props: [
       { name: "label", type: "string", defaultValue: "Radio Option" },
       { name: "checked", type: "boolean", defaultValue: false },
@@ -143,6 +148,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-radio-group",
+    description: "A group of radio buttons for single selection from a list.",
     props: [
       { name: "label", type: "string", defaultValue: "Select One" },
       { name: "name", type: "string", defaultValue: "choice" },
@@ -158,6 +164,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-switch",
+    description: "A toggle switch component for boolean states.",
     props: [
       { name: "label", type: "string", defaultValue: "Switch Label" },
       { name: "checked", type: "boolean", defaultValue: false },
@@ -175,6 +182,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-select",
+    description: "A dropdown selection component.",
     props: [
       { name: "label", type: "string", defaultValue: "Select Label" },
       {
@@ -183,7 +191,6 @@ const COMPONENTS = [
         defaultValue: "Select an option...",
       },
       { name: "disabled", type: "boolean", defaultValue: false },
-      { name: "searchable", type: "boolean", defaultValue: false },
       { name: "helperText", type: "string", defaultValue: "" },
     ],
     defaultValues: {
@@ -196,7 +203,17 @@ const COMPONENTS = [
     },
   },
   {
+    name: "ui-divider",
+    description: "A visual separator between content.",
+    props: [
+      { name: "orientation", type: "select", options: ["horizontal", "vertical"], defaultValue: "horizontal" },
+      { name: "label", type: "string", defaultValue: "" },
+    ],
+    defaultValues: {},
+  },
+  {
     name: "ui-slider",
+    description: "A range slider input component.",
     props: [
       { name: "label", type: "string", defaultValue: "Slider Label" },
       { name: "value", type: "number", defaultValue: 50 },
@@ -212,6 +229,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-colorpicker",
+    description: "A color picker input component.",
     props: [
       { name: "label", type: "string", defaultValue: "Color Picker" },
       { name: "value", type: "string", defaultValue: "#3b82f6" },
@@ -224,6 +242,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-datepicker",
+    description: "A date picker input component.",
     props: [
       { name: "label", type: "string", defaultValue: "Date Picker" },
       {
@@ -242,6 +261,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-taginput",
+    description: "A tag input component for managing multiple tags.",
     props: [
       { name: "label", type: "string", defaultValue: "Tags" },
       {
@@ -263,7 +283,19 @@ const COMPONENTS = [
     },
   },
   {
+    name: "ui-progress",
+    description: "A progress bar component.",
+    props: [
+      { name: "value", type: "number", defaultValue: 50 },
+      { name: "max", type: "number", defaultValue: 100 },
+      { name: "showValue", type: "boolean", defaultValue: true },
+      { name: "variant", type: "select", options: ["primary", "success", "warning", "danger"], defaultValue: "primary" },
+    ],
+    defaultValues: {},
+  },
+  {
     name: "ui-form",
+    description: "A wrapper component for form validation and submission.",
     props: [],
     slots: [
       { name: "default", defaultValue: `
@@ -283,6 +315,7 @@ const COMPONENTS = [
 
   {
     name: "ui-button",
+    description: "A clickable button component with various variants and sizes.",
     props: [
       {
         name: "variant",
@@ -321,10 +354,24 @@ const COMPONENTS = [
     ],
     defaultValues: {},
   },
+  {
+    name: "ui-icon-button",
+    description: "A button component that contains only an icon.",
+    props: [
+      { name: "icon", type: "string", defaultValue: '<i class="fa-solid fa-star"></i>' },
+      { name: "variant", type: "select", options: ["primary", "secondary", "success", "warning", "danger", "ghost", "outline"], defaultValue: "primary" },
+      { name: "size", type: "select", options: ["sm", "md", "lg"], defaultValue: "md" },
+      { name: "disabled", type: "boolean", defaultValue: false },
+      { name: "loading", type: "boolean", defaultValue: false },
+      { name: "title", type: "string", defaultValue: "" },
+    ],
+    defaultValues: {},
+  },
 
   // === DISPLAY & CONTENT ===
   {
     name: "ui-card",
+    description: "A container component for grouping content.",
     props: [
       { name: "title", type: "string", defaultValue: "Card Title" },
       {
@@ -349,6 +396,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-badge",
+    description: "A small status indicator or label.",
     props: [
       {
         name: "variant",
@@ -366,6 +414,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-tag",
+    description: "A tag component for labels and categorization.",
     props: [
       {
         name: "variant",
@@ -384,6 +433,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-avatar",
+    description: "A component to display user avatars or initials.",
     props: [
       {
         name: "src",
@@ -410,13 +460,27 @@ const COMPONENTS = [
   },
   {
     name: "ui-keyboard-badge",
+    description: "A component to display keyboard shortcuts.",
     props: [],
     defaultValues: {
       keys: ["Ctrl", "K"],
     },
   },
   {
+    name: "ui-tooltip",
+    description: "A popup that displays information when hovering over an element.",
+    props: [
+      { name: "content", type: "string", defaultValue: "Tooltip content" },
+      { name: "placement", type: "select", options: ["top", "bottom", "left", "right"], defaultValue: "top" },
+    ],
+    slots: [
+      { name: "trigger", defaultValue: '<ui-button>Hover Me</ui-button>' },
+    ],
+    defaultValues: {},
+  },
+  {
     name: "ui-table",
+    description: "A data table component with search and pagination.",
     props: [
       { name: "searchable", type: "boolean", defaultValue: true },
       { name: "pagination", type: "boolean", defaultValue: true },
@@ -534,6 +598,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-code-editor",
+    description: "A code editor component with syntax highlighting.",
     props: [
       { name: "language", type: "string", defaultValue: "javascript" },
       { name: "placeholder", type: "string", defaultValue: "Type your code here..." },
@@ -543,10 +608,21 @@ const COMPONENTS = [
     ],
     defaultValues: {},
   },
+  {
+    name: "ui-code-display",
+    description: "A component to display code snippets with syntax highlighting.",
+    props: [
+      { name: "language", type: "string", defaultValue: "javascript" },
+      { name: "code", type: "string", defaultValue: "console.log('Hello, World!');" },
+      { name: "showLineNumbers", type: "boolean", defaultValue: true },
+    ],
+    defaultValues: {},
+  },
 
   // === NAVIGATION ===
   {
     name: "ui-breadcrumb",
+    description: "A breadcrumb navigation component.",
     props: [],
     defaultValues: {
       items: [
@@ -558,6 +634,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-pagination",
+    description: "A navigation component for paginated content.",
     props: [
       { name: "total", type: "number", defaultValue: 50 },
       { name: "current", type: "number", defaultValue: 1 },
@@ -571,6 +648,7 @@ const COMPONENTS = [
   // === FEEDBACK & STATUS ===
   {
     name: "ui-spin",
+    description: "A loading spinner component.",
     props: [
       {
         name: "size",
@@ -587,6 +665,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-skeleton",
+    description: "A placeholder component for loading states.",
     props: [
       {
         name: "variant",
@@ -604,6 +683,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-empty",
+    description: "An empty state component for no data scenarios.",
     props: [
       { name: "description", type: "string", defaultValue: "No Data" },
       { name: "image", type: "string", defaultValue: "" },
@@ -615,6 +695,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-message",
+    description: "A global toast message component for notifications.",
     previewWrapper: "div",
     targetSelector: "ui-message",
     props: [
@@ -636,6 +717,7 @@ const COMPONENTS = [
   // === OVERLAY & POPUPS ===
   {
     name: "ui-dropdown",
+    description: "A toggleable menu for displaying lists of links or actions.",
     props: [
       {
         name: "placement",
@@ -656,6 +738,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-popover",
+    description: "A popover component for displaying contextual information.",
     props: [
       { name: "title", type: "string", defaultValue: "Popover Title" },
       {
@@ -679,6 +762,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-modal",
+    description: "A dialog component that overlays the main content.",
     previewWrapper: "div",
     targetSelector: "ui-modal",
     props: [
@@ -707,6 +791,7 @@ const COMPONENTS = [
   },
   {
     name: "ui-drawer",
+    description: "A side navigation panel that slides in from the edge.",
     previewWrapper: "div",
     targetSelector: "ui-drawer",
     props: [
@@ -740,31 +825,80 @@ const COMPONENTS = [
   },
 ];
 
-let activeComponent = COMPONENTS[0];
+let activeComponent = null;
 let currentProps = {};
 let currentSlots = {};
 
-function renderSidebar() {
-  const navLinks = document.getElementById("nav-links");
-  navLinks.innerHTML = COMPONENTS.map(
-    (comp) => `
-    <a class="nav-item ${
-      comp.name === activeComponent.name ? "active" : ""
-    }" 
-       onclick="setActiveComponent('${comp.name}')">
-      ${comp.name}
-    </a>
-  `
-  ).join("");
-}
+window.navigateTo = function(page, componentName = null) {
+  const homePage = document.getElementById("home-page");
+  const componentPage = document.getElementById("component-page");
+  const navLinks = document.querySelectorAll(".nav-item");
+
+  navLinks.forEach(link => link.classList.remove("active"));
+
+  if (page === "home") {
+    homePage.style.display = "block";
+    componentPage.style.display = "none";
+    activeComponent = null;
+    
+    // Set Home link active
+    const homeLink = document.getElementById("nav-home");
+    if (homeLink) homeLink.classList.add("active");
+  } else if (page === "component" && componentName) {
+    homePage.style.display = "none";
+    componentPage.style.display = "block";
+    
+    setActiveComponent(componentName);
+    
+    // Set Component link active
+    const link = document.getElementById(`nav-${componentName}`);
+    if (link) link.classList.add("active");
+  }
+};
 
 function setActiveComponent(name) {
   activeComponent = COMPONENTS.find((c) => c.name === name);
-  renderSidebar();
-  renderShowcase();
+  if (activeComponent) {
+    document.getElementById("component-title").textContent = activeComponent.name;
+    document.getElementById("component-description").textContent = activeComponent.description || "No description available.";
+    renderShowcase();
+  }
+}
+
+function renderSidebar() {
+  const navLinksContainer = document.getElementById("nav-links");
+  
+  // Add Home link
+  let html = `
+    <a class="nav-item" id="nav-home" onclick="navigateTo('home')">
+      <i class="fas fa-home" style="margin-right: 0.5rem;"></i> Home
+    </a>
+    <div style="height: 1px; background: var(--color-border); margin: 1rem 0;"></div>
+  `;
+
+  // Group components by category (if we had categories, but for now just list them)
+  // We can use the existing order
+  
+  // Let's try to group them based on the previous reorganization if possible, 
+  // but the COMPONENTS array is already flat. 
+  // We can just render them as is for now, or add headers if we want.
+  
+  // For simplicity, let's just render the list as before but with the new onclick handler
+  
+  COMPONENTS.forEach((component) => {
+    html += `
+      <a class="nav-item" id="nav-${component.name}" onclick="navigateTo('component', '${component.name}')">
+        ${component.name}
+      </a>
+    `;
+  });
+
+  navLinksContainer.innerHTML = html;
 }
 
 function renderShowcase() {
+  if (!activeComponent) return;
+
   const container = document.getElementById("showcase-container");
 
   // reset props when switching components
@@ -817,23 +951,14 @@ function renderControls() {
       let inputHtml = "";
 
       if (prop.type === "select") {
-        // Convert simple string options to object array for ui-select
-        const options = prop.options.map((opt) => ({
-          label: opt,
-          value: opt,
-        }));
-        const optionsJson = JSON.stringify(options).replace(
-          /"/g,
-          "&quot;"
-        );
-
         inputHtml = `
           <ui-select 
             value="${value}" 
             label="${prop.name}"
-            options='${optionsJson}'
             onchange="updateProp('${prop.name}', event.detail.value)"
-          ></ui-select>
+          >
+            ${prop.options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+          </ui-select>
         `;
       } else if (prop.type === "boolean") {
         inputHtml = `
@@ -869,7 +994,6 @@ function renderControls() {
       `;
     })
     .join("");
-
 
   // Render Slots
   const slotsContainer = document.getElementById("slots-container");
@@ -1011,7 +1135,8 @@ function updateComponent() {
       key === "items" ||
       key === "columns" ||
       key === "data" ||
-      key === "keys"
+      key === "keys" ||
+      key === "options"
     )
       return;
 
@@ -1030,7 +1155,16 @@ function updateComponent() {
   }
   
   // Slot content generation
-  if (activeComponent.slots) {
+  if (activeComponent.name === "ui-select" && currentProps.options) {
+    code += '\n';
+    currentProps.options.forEach(opt => {
+      if (typeof opt === 'object' && opt !== null) {
+        code += `  <option value="${opt.value}">${opt.label}</option>\n`;
+      } else {
+        code += `  <option value="${opt}">${opt}</option>\n`;
+      }
+    });
+  } else if (activeComponent.slots) {
     code += '\n';
     activeComponent.slots.forEach(slot => {
       const val = currentSlots[slot.name];
@@ -1064,4 +1198,4 @@ function updateComponent() {
 
 // Initial render
 renderSidebar();
-renderShowcase();
+window.navigateTo('home');

@@ -8,7 +8,7 @@
 .code-display {
   position: relative;
   border-radius: $border-radius;
-  background-color: #1e1e1e; // Dark background for code
+  background-color: $bg-secondary;
   overflow: hidden;
   border: 1px solid $border-color;
 
@@ -17,8 +17,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba($white, 0.1);
   }
 
   &__language {
@@ -42,7 +41,6 @@
     gap: 0.5rem;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
       color: $text-primary;
     }
 
@@ -61,9 +59,9 @@
   &__line-numbers {
     flex-shrink: 0;
     padding: 1rem 0.5rem;
-    background-color: #1e1e1e;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    color: #858585;
+    background-color: $bg-secondary;
+    border-right: 1px solid rgba($white, 0.1);
+    color: $text-tertiary;
     text-align: right;
     font-family: "Fira Code", "Consolas", monospace;
     font-size: 0.875rem;
@@ -81,7 +79,7 @@
     font-family: "Fira Code", "Consolas", monospace;
     font-size: 0.875rem;
     line-height: 1.5;
-    color: #d4d4d4;
+    color: $text-primary;
 
     code {
       font-family: inherit;
@@ -92,7 +90,7 @@
 // PrismJS Theme Overrides (Simple Dark Theme)
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #d4d4d4;
+  color: $text-primary;
   text-shadow: none;
   font-family: "Fira Code", "Consolas", monospace;
   direction: ltr;
@@ -110,11 +108,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #6a9955;
+  color: $green-500;
 }
 
 .token.punctuation {
-  color: #d4d4d4;
+  color: $text-primary;
 }
 
 .token.namespace {
@@ -128,7 +126,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #b5cea8;
+  color: $green-600;
 }
 
 .token.selector,
@@ -137,7 +135,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #ce9178;
+  color: $yellow-600;
 }
 
 .token.operator,
@@ -145,24 +143,24 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #d4d4d4;
+  color: $text-primary;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #569cd6;
+  color: $blue-500;
 }
 
 .token.function,
 .token.class-name {
-  color: #dcdcaa;
+  color: $yellow-500;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: #d16969;
+  color: $red-500;
 }
 
 .token.important,

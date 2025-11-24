@@ -20,6 +20,7 @@ export class UiCard extends LitElement {
   @state() private _hasIconSlot = false;
   @state() private _hasHeaderSlot = false;
 
+
   private handleIconSlotChange(e: Event) {
     const slot = e.target as HTMLSlotElement;
     const nodes = slot.assignedNodes({ flatten: true });

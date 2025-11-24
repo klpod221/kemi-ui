@@ -21,7 +21,7 @@
 .code-editor {
   position: relative;
   border-radius: $border-radius;
-  background-color: #1e1e1e;
+  background-color: $bg-secondary;
   border: 1px solid $border-color;
   overflow: hidden;
   font-family: "Fira Code", "Consolas", monospace;
@@ -38,9 +38,9 @@
   &__line-numbers {
     flex-shrink: 0;
     padding: 1rem 0.5rem;
-    background-color: #1e1e1e;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    color: #858585;
+    background-color: $bg-secondary;
+    border-right: 1px solid rgba($white, 0.1);
+    color: $text-tertiary;
     text-align: right;
     font-family: inherit;
     font-size: inherit;
@@ -81,16 +81,16 @@
     left: 0;
     z-index: 1;
     color: transparent;
-    caret-color: #fff;
+    caret-color: $white;
     resize: vertical;
     outline: none;
-    
+
     // Make text transparent but keep cursor visible
     color: transparent;
     background-color: transparent;
-    
+
     &::selection {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba($white, 0.1);
       color: transparent;
     }
   }
@@ -99,21 +99,17 @@
     position: relative;
     z-index: 0;
     pointer-events: none;
-    color: #d4d4d4;
-    
+    color: $text-primary;
+
     code {
       font-family: inherit;
     }
   }
 }
 
-// Reuse Prism styles from code-display or define them here again
-// For simplicity, I'll include the basic ones here too to be self-contained or I could import a common mixin if I had one.
-// I'll just copy the relevant parts for now.
-
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #d4d4d4;
+  color: $text-primary;
   text-shadow: none;
   font-family: "Fira Code", "Consolas", monospace;
   direction: ltr;
@@ -130,36 +126,60 @@ pre[class*="language-"] {
 .token.comment,
 .token.prolog,
 .token.doctype,
-.token.cdata { color: #6a9955; }
-.token.punctuation { color: #d4d4d4; }
-.token.namespace { opacity: 0.7; }
+.token.cdata {
+  color: $green-500;
+}
+.token.punctuation {
+  color: $text-primary;
+}
+.token.namespace {
+  opacity: 0.7;
+}
 .token.property,
 .token.tag,
 .token.boolean,
 .token.number,
 .token.constant,
 .token.symbol,
-.token.deleted { color: #b5cea8; }
+.token.deleted {
+  color: $green-600;
+}
 .token.selector,
 .token.attr-name,
 .token.string,
 .token.char,
 .token.builtin,
-.token.inserted { color: #ce9178; }
+.token.inserted {
+  color: $yellow-600;
+}
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string { color: #d4d4d4; }
+.style .token.string {
+  color: $text-primary;
+}
 .token.atrule,
 .token.attr-value,
-.token.keyword { color: #569cd6; }
+.token.keyword {
+  color: $blue-500;
+}
 .token.function,
-.token.class-name { color: #dcdcaa; }
+.token.class-name {
+  color: $yellow-500;
+}
 .token.regex,
 .token.important,
-.token.variable { color: #d16969; }
+.token.variable {
+  color: $red-500;
+}
 .token.important,
-.token.bold { font-weight: bold; }
-.token.italic { font-style: italic; }
-.token.entity { cursor: help; }
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}

@@ -61,7 +61,7 @@
   &--primary {
     background-color: $blue-600;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
       background-color: $blue-700;
@@ -75,7 +75,7 @@
   &--secondary {
     background-color: $gray-600;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
       background-color: $gray-700;
@@ -89,7 +89,7 @@
   &--success {
     background-color: $green-600;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
       background-color: $green-700;
@@ -103,7 +103,7 @@
   &--warning {
     background-color: $yellow-600;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
       background-color: $yellow-700;
@@ -117,7 +117,7 @@
   &--danger {
     background-color: $red-600;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
       background-color: $red-700;

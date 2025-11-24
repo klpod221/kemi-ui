@@ -85,8 +85,8 @@
   left: 2px;
   background-color: white;
   border-radius: 50%;
-  transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px $shadow-sm;
 
   .switch--sm & {
     width: calc(1.125rem - 4px);

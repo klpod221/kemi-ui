@@ -11,7 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       :root {
         /* Derived from src/styles/variables.scss */
@@ -115,7 +121,7 @@
         margin-bottom: 3rem;
         line-height: 1.6;
       }
-      
+
       .preview {
         border: 1px solid var(--color-border);
         border-radius: 8px;
@@ -135,7 +141,7 @@
         );
         background-size: 20px 20px;
       }
-      
+
       .control-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -158,6 +164,85 @@
         margin: 0;
         line-height: 1.5;
       }
+
+      .select-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .native-select {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: var(--color-bg-input);
+        border: 1px solid var(--color-border);
+        border-radius: 0.375rem;
+        color: var(--color-text);
+        font-size: 0.875rem;
+        outline: none;
+      }
+
+      .native-select:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+      }
+
+      .home-section {
+        margin-top: 2rem;
+      }
+
+      .feature-list {
+        line-height: 1.8;
+        color: var(--color-text-secondary);
+      }
+
+      .feature-list strong {
+        color: var(--color-text);
+      }
+
+      .quick-start-label {
+        color: var(--color-text-secondary);
+        margin-bottom: 1rem;
+      }
+
+      .quick-start-label + .code-block {
+        margin-top: 1rem;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-border);
+        color: var(--color-text-secondary);
+        font-size: 0.875rem;
+      }
+
+      footer a {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .feature-icon.primary {
+        color: #3b82f6;
+      }
+
+      .feature-icon.success {
+        color: #22c55e;
+      }
+
+      .feature-icon.warning {
+        color: #fb923c;
+      }
     </style>
   </head>
   <body>
@@ -167,13 +252,138 @@
     </nav>
 
     <main class="main">
-      <h1>Component Showcase</h1>
-      <p class="intro">
-        Explore the Kemi UI component library. Interact with the components
-        below to see how they behave and copy the code snippets to use them in
-        your project.
-      </p>
-      <div id="showcase-container"></div>
+      <div id="home-page">
+        <h1>Kemi UI: Simple & Lightweight Web Component Library</h1>
+        <p class="intro">
+          A modern, customizable UI component library built with Lit. Provides a
+          collection of reusable web components with dark theme, TypeScript
+          support, and form validation utilities.
+        </p>
+
+        <div class="home-section">
+          <h3>✨ Features</h3>
+          <div class="feature-grid">
+            <ui-card>
+              <div slot="icon" class="feature-icon primary">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div slot="header">
+                <h4>Modern Design</h4>
+              </div>
+              <div>
+                Clean and professional dark theme with beautiful aesthetics
+              </div>
+            </ui-card>
+            <ui-card>
+              <div slot="icon" class="feature-icon success">
+                <i class="fa-solid fa-feather"></i>
+              </div>
+              <div slot="header">
+                <h4>Lightweight</h4>
+              </div>
+              <div>
+                Built with Lit for minimal bundle size and fast performance
+              </div>
+            </ui-card>
+            <ui-card>
+              <div slot="icon" class="feature-icon warning">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <div slot="header">
+                <h4>Easy to Use</h4>
+              </div>
+              <div>Simple API with web components - just import and use</div>
+            </ui-card>
+            <ui-card>
+              <div slot="icon" class="feature-icon primary">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <div slot="header">
+                <h4>Tree-shakeable</h4>
+              </div>
+              <div>Import only what you need to keep your bundle small</div>
+            </ui-card>
+            <ui-card>
+              <div slot="icon" class="feature-icon success">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div slot="header">
+                <h4>TypeScript</h4>
+              </div>
+              <div>Full TypeScript support with complete type definitions</div>
+            </ui-card>
+            <ui-card>
+              <div slot="icon" class="feature-icon warning">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div slot="header">
+                <h4>Form Validation</h4>
+              </div>
+              <div>Built-in validation utilities for form components</div>
+            </ui-card>
+          </div>
+        </div>
+
+        <div class="home-section">
+          <h3>📦 Installation</h3>
+          <h4>NPM</h4>
+          <ui-code-display
+            language="bash"
+            code="npm install @klpod221/kemi-ui"
+          ></ui-code-display>
+
+          <h4 style="margin-top: 1rem">CDN</h4>
+          <ui-code-display
+            language="html"
+            code='<script type="module" src="https://cdn.jsdelivr.net/npm/@klpod221/kemi-ui/dist/kemi-ui.js"></script>'
+          >
+          </ui-code-display>
+        </div>
+
+        <div class="home-section">
+          <h3>🚀 Quick Start</h3>
+          <p class="quick-start-label">Import the library:</p>
+          <ui-code-display
+            language="javascript"
+            code='import "@klpod221/kemi-ui";'
+          ></ui-code-display>
+
+          <p class="quick-start-label">Use components in your HTML:</p>
+          <ui-code-display
+            language="html"
+            code='<ui-button variant="primary">Click me!</ui-button>'
+          >
+          </ui-code-display>
+        </div>
+
+        <div class="home-section" style="text-align: center">
+          <p style="color: var(--color-text-secondary); margin-bottom: 1rem">
+            Ready to get started? Explore the components in the sidebar!
+          </p>
+          <ui-button
+            variant="primary"
+            size="lg"
+            onclick="navigateTo('component', 'ui-input')"
+          >
+            Browse Components
+          </ui-button>
+        </div>
+      </div>
+
+      <div id="component-page" style="display: none">
+        <h1 id="component-title">Component Name</h1>
+        <p class="intro" id="component-description">
+          Component description goes here.
+        </p>
+        <div id="showcase-container"></div>
+      </div>
+
+      <footer>
+        <p>
+          &copy; 2025 Kemi UI. Made with ❤️ by
+          <a href="https://github.com/klpod221">klpod221</a>.
+        </p>
+      </footer>
     </main>
 
     <script type="module" src="/showcase.js"></script>

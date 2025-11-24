@@ -32,8 +32,16 @@ Check out the live showcase to see all components in action:
 
 ## 📦 Installation
 
+### NPM
+
 ```bash
-npm install kemi-ui
+npm install @klpod221/kemi-ui
+```
+
+### CDN
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/@klpod221/kemi-ui/dist/kemi-ui.js"></script>
 ```
 
 ## 🚀 Quick Start
@@ -41,7 +49,7 @@ npm install kemi-ui
 ### Import the library
 
 ```javascript
-import "kemi-ui";
+import "@klpod221/kemi-ui";
 ```
 
 ### Use components in your HTML
@@ -107,7 +115,7 @@ Kemi UI includes a comprehensive set of components:
 Kemi UI provides a powerful validation utility:
 
 ```javascript
-import { validate, registerRule, setMessage } from "kemi-ui/validators";
+import { validate, registerRule, setMessage } from "@klpod221/kemi-ui/validators";
 
 // Built-in rules: required, email, min, max, minLength, maxLength, pattern
 
@@ -150,7 +158,7 @@ Kemi UI works seamlessly with any framework since it's built with standard web c
 ### Vanilla JavaScript
 
 ```javascript
-import "kemi-ui";
+import "@klpod221/kemi-ui";
 
 document.querySelector("#app").innerHTML = `
   <ui-button variant="primary">Click me</ui-button>
@@ -160,7 +168,7 @@ document.querySelector("#app").innerHTML = `
 ### React
 
 ```jsx
-import "kemi-ui";
+import "@klpod221/kemi-ui";
 
 function App() {
   return <ui-button variant="primary">Click me</ui-button>;
@@ -175,7 +183,7 @@ function App() {
 </template>
 
 <script>
-import "kemi-ui";
+import "@klpod221/kemi-ui";
 
 export default {
   name: "App",
@@ -187,7 +195,7 @@ export default {
 
 ```typescript
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
-import "kemi-ui";
+import "@klpod221/kemi-ui";
 
 @Component({
   selector: "app-root",

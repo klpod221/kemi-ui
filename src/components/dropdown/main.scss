@@ -20,7 +20,7 @@
   border: 1px solid $border-color;
   border-radius: $border-radius;
   padding: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px -1px $shadow-md;
   z-index: 1000;
   min-width: 150px;
   animation: fadeSlideDown 0.2s ease;

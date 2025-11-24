@@ -64,12 +64,12 @@
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+      box-shadow: 0 0 0 4px rgba($blue-500, 0.2);
     }
 
     &:active {
       transform: scale(1.05);
-      box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 0 6px rgba($blue-500, 0.3);
     }
   }
 
@@ -84,12 +84,12 @@
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+      box-shadow: 0 0 0 4px rgba($blue-500, 0.2);
     }
 
     &:active {
       transform: scale(1.05);
-      box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 0 6px rgba($blue-500, 0.3);
     }
   }
 
