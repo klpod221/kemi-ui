@@ -2,6 +2,32 @@
   "name": "@klpod221/kemi-ui",
   "private": false,
   "version": "0.1.1",
+  "description": "A simple, lightweight UI component library built with Lit. Provides reusable web components with dark theme, TypeScript support, and form validation utilities.",
+  "author": {
+    "name": "Bùi Thanh Xuân",
+    "email": "klpod221@gmail.com",
+    "url": "https://klpod221.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klpod221/kemi-ui.git"
+  },
+  "homepage": "https://klpod221.com/kemi-ui",
+  "bugs": {
+    "url": "https://github.com/klpod221/kemi-ui/issues"
+  },
+  "keywords": [
+    "ui",
+    "components",
+    "web-components",
+    "lit",
+    "typescript",
+    "dark-theme",
+    "form-validation",
+    "lightweight",
+    "kemi-ui"
+  ],
   "type": "module",
   "main": "./dist/kemi-ui.umd.cjs",
   "module": "./dist/kemi-ui.js",
