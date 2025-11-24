@@ -1,6 +1,17 @@
-# Kemi UI
+<div align="center">
+    <h1>Kemi UI: Simple & Lightweight Web Component Library</h1>
+    <p>A modern, customizable UI component library built with Lit. Provides a collection of reusable web components with dark theme, TypeScript support, and form validation utilities.</p>
+    <img src="https://img.shields.io/npm/v/@klpod221/kemi-ui?style=for-the-badge&color=74c7ec&labelColor=111827" alt="NPM Version">
+    <img src="https://img.shields.io/npm/dm/@klpod221/kemi-ui?style=for-the-badge&color=facc15&labelColor=111827" alt="NPM Downloads">
+    <img src="https://img.shields.io/bundlephobia/minzip/@klpod221/kemi-ui?style=for-the-badge&color=a78bfa&labelColor=111827" alt="Bundle Size">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge&color=34d399&labelColor=111827" alt="License">
+</div>
 
-A simple, lightweight UI component library built with Lit. This library provides a collection of reusable web components that I use across my applications - and it might be suitable for your projects too!
+## 📝 Description
+
+**Kemi UI** is a simple, lightweight UI component library that I use across my personal applications. Built with Lit for optimal performance and minimal bundle size, it offers a comprehensive set of web components including forms, navigation, overlays, and data display elements—all styled with a modern dark theme and built-in validation utilities.
+
+Perfect for developers who want a straightforward, no-nonsense component library that just works. Whether you're building a quick prototype or a full-scale application, Kemi UI provides the essential building blocks without the complexity of larger frameworks.
 
 ## ✨ Features
 
@@ -130,7 +141,7 @@ The library uses CSS custom properties for theming. You can customize colors by 
 }
 ```
 
-## � Usage with Frameworks
+## 🔌 Usage with Frameworks
 
 Kemi UI works seamlessly with any framework since it's built with standard web components.
 
@@ -184,7 +195,7 @@ import "kemi-ui";
 export class AppComponent {}
 ```
 
-## �️ Development
+## 💻 Development
 
 ### Install dependencies
 
@@ -248,7 +259,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This is primarily maintained for personal use, but suggestions and improvements are welcome.
 
-## �🔗 Links
+## 🔗 Links
 
 - Built with [Lit](https://lit.dev/)
 - Bundled with [Vite](https://vitejs.dev/)
