@@ -1,0 +1,179 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.code-display {
+  position: relative;
+  border-radius: $border-radius;
+  background-color: #1e1e1e; // Dark background for code
+  overflow: hidden;
+  border: 1px solid $border-color;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__language {
+    font-size: 0.75rem;
+    color: $text-secondary;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__copy-btn {
+    background: transparent;
+    border: none;
+    color: $text-secondary;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $text-primary;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__line-numbers {
+    flex-shrink: 0;
+    padding: 1rem 0.5rem;
+    background-color: #1e1e1e;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: #858585;
+    text-align: right;
+    font-family: "Fira Code", "Consolas", monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    user-select: none;
+    min-width: 2rem;
+    white-space: pre;
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: "Fira Code", "Consolas", monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #d4d4d4;
+
+    code {
+      font-family: inherit;
+    }
+  }
+}
+
+// PrismJS Theme Overrides (Simple Dark Theme)
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #d4d4d4;
+  text-shadow: none;
+  font-family: "Fira Code", "Consolas", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+/* Token Colors */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a9955;
+}
+
+.token.punctuation {
+  color: #d4d4d4;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #569cd6;
+}
+
+.token.function,
+.token.class-name {
+  color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #d16969;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

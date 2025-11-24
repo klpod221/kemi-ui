@@ -5,7 +5,12 @@ export { UiInput } from "./components/input";
 export { UiForm } from "./components/form";
 export { UiTextarea } from "./components/textarea";
 export { UiCheckbox } from "./components/checkbox";
+export { UiCheckboxGroup } from "./components/checkbox-group";
+export type { CheckboxOption } from "./components/checkbox-group";
 export { UiRadio } from "./components/radio";
+export { UiRadioGroup } from "./components/radio-group";
+export type { RadioOption } from "./components/radio-group";
+export { UiSwitch } from "./components/switch";
 export { UiSelect } from "./components/select";
 export type { SelectOption } from "./components/select";
 export { UiSlider } from "./components/slider";
@@ -27,6 +32,8 @@ export { UiPagination } from "./components/pagination";
 export { UiPopover } from "./components/popover";
 export { UiDropdown } from "./components/dropdown";
 export { UiTable } from "./components/table";
+export { UiCodeDisplay } from "./components/code-display";
+export { UiCodeEditor } from "./components/code-editor";
 export type {
   TableColumn,
   DataSourceParams,

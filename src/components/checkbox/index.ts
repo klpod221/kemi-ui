@@ -16,6 +16,7 @@ export class UiCheckbox extends LitElement {
   @property({ type: Boolean }) checked = false;
   @property({ type: Boolean }) indeterminate = false;
   @property({ type: String }) value = "";
+  @property({ type: String }) name = "";
   @property({ type: String }) label = "";
   @property({ type: Boolean }) disabled = false;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
@@ -103,6 +104,7 @@ export class UiCheckbox extends LitElement {
           <input
             type="checkbox"
             id=${this.id}
+            name=${this.name}
             class="checkbox-input"
             .checked=${this.checked}
             .indeterminate=${this.indeterminate}

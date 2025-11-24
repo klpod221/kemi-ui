@@ -15,10 +15,8 @@ export class UiCard extends LitElement {
   @property({ type: Boolean }) noPadding = false;
   @property({ type: Boolean }) spacing = true;
   @property({ type: Boolean }) center = false;
-  @property({ type: String }) iconBackground = ""; // CSS class or style could be passed, but for now we rely on slots or default
+  @property({ type: String }) iconBackground = "";
   @property({ type: String }) iconColor = "";
-  // Note: iconColor and iconBackground are better handled via slots or CSS variables in this implementation context
-  // or by passing styles if we want strict parity, but slots are more flexible in Lit.
   @state() private _hasIconSlot = false;
   @state() private _hasHeaderSlot = false;
 

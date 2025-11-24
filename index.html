@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="./dist/kemi-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       :root {
         /* Derived from src/styles/variables.scss */
@@ -115,15 +115,10 @@
         margin-bottom: 3rem;
         line-height: 1.6;
       }
-
-      /* Showcase Block Styles */
-      .showcase-block {
+      
+      .preview {
         border: 1px solid var(--color-border);
         border-radius: 8px;
-        background: var(--color-bg-block);
-      }
-
-      .preview {
         padding: 3rem;
         display: flex;
         justify-content: center;
@@ -140,61 +135,17 @@
         );
         background-size: 20px 20px;
       }
-
-      .controls {
-        padding: 2rem;
-        background: var(--color-bg-block);
-        border-bottom: 1px solid var(--color-border);
-      }
-
-      .controls h3 {
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-        font-size: 1.125rem;
-        color: var(--color-text);
-      }
-
+      
       .control-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1.5rem;
       }
 
-      .control-item {
+      #showcase-container {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .control-item label {
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--color-text-secondary);
-      }
-
-      .control-item input[type="text"],
-      .control-item input[type="number"],
-      .control-item select {
-        padding: 0.5rem;
-        background: var(--color-bg);
-        border: 1px solid var(--color-border);
-        border-radius: 4px;
-        font-size: 0.875rem;
-        color: var(--color-text);
-      }
-
-      .control-item input:focus,
-      .control-item select:focus {
-        outline: none;
-        border-color: var(--color-primary);
-      }
-
-      .control-item input[type="checkbox"] {
-        width: 1.25rem;
-        height: 1.25rem;
-        accent-color: var(--color-primary);
-        background: var(--color-bg);
-        border: 1px solid var(--color-border);
+        gap: 1.5rem;
       }
 
       .code-block {
