@@ -3,8 +3,10 @@
     <p>A modern, customizable UI component library built with Lit. Provides a collection of reusable web components with dark theme, TypeScript support, and form validation utilities.</p>
     <img src="https://img.shields.io/npm/v/@klpod221/kemi-ui?style=for-the-badge&color=74c7ec&labelColor=111827" alt="NPM Version">
     <img src="https://img.shields.io/npm/dm/@klpod221/kemi-ui?style=for-the-badge&color=facc15&labelColor=111827" alt="NPM Downloads">
-    <img src="https://img.shields.io/bundlephobia/minzip/@klpod221/kemi-ui?style=for-the-badge&color=a78bfa&labelColor=111827" alt="Bundle Size">
+    <img src="https://img.shields.io/github/repo-size/klpod221/kemi-ui?style=for-the-badge&color=a78bfa&labelColor=111827" alt="Repo Size">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge&color=34d399&labelColor=111827" alt="License">
+    <img src="https://img.shields.io/github/stars/klpod221/kemi-ui?style=for-the-badge&color=34d399&labelColor=111827" alt="Stars">
+    <img src="https://img.shields.io/github/last-commit/klpod221/kemi-ui?style=for-the-badge&color=74c7ec&labelColor=111827" alt="Last Commit">
 </div>
 
 ## 📝 Description
