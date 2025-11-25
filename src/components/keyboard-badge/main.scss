@@ -7,27 +7,26 @@
 .kbd-wrapper {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: $spacing-xs;
 }
 
 .kbd {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 1.5rem;
-  padding: 0.25rem 0.5rem;
-  font-family: monospace;
-  font-size: 0.75rem;
+  min-width: $size-3;
+  padding: $spacing-xs $spacing-sm;
+  font-family: $font-mono;
+  font-size: $font-xs;
   font-weight: 500;
   line-height: 1;
   color: $text-primary;
   background-color: $bg-secondary;
-  border: 1px solid $border-color;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 0 0 $gray-900;
+  border: 1px solid $border-dark;
+  border-radius: $spacing-xs;
 }
 
 .kbd-separator {
-  font-size: 0.75rem;
-  color: $gray-500;
+  font-size: $font-xs;
+  color: $disabled-text;
 }

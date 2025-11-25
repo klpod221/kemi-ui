@@ -1,3 +1,10 @@
+$overlay-backdrop: rgba(0, 0, 0, 0.5);
+$transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$border-radius: 0.5rem;
+
+$font-family: inherit;
+$font-mono: "Fira Code", "Consolas", monospace;
+
 $bg-primary: #0d0d0d;
 $bg-secondary: #171717;
 $bg-tertiary: #1f2937;
@@ -7,51 +14,54 @@ $text-primary: #f3f4f6;
 $text-secondary: #9ca3af;
 $text-tertiary: #6b7280;
 
-$border-color: #374151;
 $border-light: #4b5563;
 $border-dark: #1f2937;
 
-$shadow-xs: rgba(0, 0, 0, 0.1);
-$shadow-sm: rgba(0, 0, 0, 0.2);
-$shadow-md: rgba(0, 0, 0, 0.3);
-$shadow-lg: rgba(0, 0, 0, 0.5);
+$disabled-bg: #4b5563;
+$disabled-text: #6b7280;
 
-$input-bg: #1f2937;
-$input-border: #374151;
-$input-focus: #3b82f6;
+$primary: #3b82f6;
+$primary-hover: #2563eb;
+$primary-active: #1d4ed8;
+$primary-light: #60a5fa;
 
-$scrollbar-thumb: #4b5563;
-$scrollbar-thumb-hover: #6b7280;
+$success: #22c55e;
+$success-dark: #16a34a;
+$success-darker: #15803d;
 
-// Semantic Colors
-$blue-400: #60a5fa;
-$blue-500: #3b82f6;
-$blue-600: #2563eb;
-$blue-700: #1d4ed8;
+$warning: #eab308;
+$warning-dark: #ca8a04;
+$warning-darker: #a16207;
 
-$green-500: #22c55e;
-$green-600: #16a34a;
-$green-700: #15803d;
-
-$yellow-500: #eab308;
-$yellow-600: #ca8a04;
-$yellow-700: #a16207;
-
-$red-400: #f87171;
-$red-500: #ef4444;
-$red-600: #dc2626;
-$red-700: #b91c1c;
-
-$gray-300: #d1d5db;
-$gray-400: #9ca3af;
-$gray-500: #6b7280;
-$gray-600: #4b5563;
-$gray-700: #374151;
-$gray-800: #1f2937;
-$gray-900: #111827;
+$danger: #ef4444;
+$danger-light: #f87171;
+$danger-dark: #dc2626;
+$danger-darker: #b91c1c;
 
 $white: #ffffff;
 
-// Constants
-$transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-$border-radius: 0.5rem;
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 0.75rem;
+$spacing-lg: 1rem;
+$spacing-xl: 1.25rem;
+$spacing-2xl: 1.5rem;
+$spacing-3xl: 2rem;
+$spacing-4xl: 2.5rem;
+$spacing-5xl: 3rem;
+
+$size-1: 0.5rem;
+$size-2: 1rem;
+$size-3: 1.5rem;
+$size-4: 2rem;
+$size-5: 2.5rem;
+$size-6: 3rem;
+$size-8: 4rem;
+$size-10: 5rem;
+
+$font-xs: 0.75rem;
+$font-sm: 0.875rem;
+$font-base: 1rem;
+$font-lg: 1.125rem;
+$font-xl: 1.25rem;
+$font-2xl: 1.5rem;

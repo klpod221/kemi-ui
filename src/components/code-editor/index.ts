@@ -50,18 +50,18 @@ export class UiCodeEditor extends LitElement {
     }
   }
 
-  // Handle tab key to insert spaces
+  
   private handleKeyDown(e: KeyboardEvent) {
     if (e.key === "Tab") {
       e.preventDefault();
       const start = this.textarea.selectionStart;
       const end = this.textarea.selectionEnd;
 
-      // Insert 2 spaces
+      
       this.value =
         this.value.substring(0, start) + "  " + this.value.substring(end);
 
-      // Move cursor
+      
       this.updateComplete.then(() => {
         this.textarea.selectionStart = this.textarea.selectionEnd = start + 2;
       });
@@ -77,9 +77,9 @@ export class UiCodeEditor extends LitElement {
   }
 
   private getHighlightedCode() {
-    // Ensure the code ends with a new line so the pre tag height matches textarea if user types enter at the end
-    // Actually, Prism might strip trailing newlines or the pre might not show it.
-    // A common trick is to add a zero-width space or similar if it ends with newline.
+    
+    
+    
     let code = this.value;
     if (code.endsWith("\n")) {
       code += " ";

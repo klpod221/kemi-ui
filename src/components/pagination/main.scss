@@ -7,16 +7,16 @@
 .pagination {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: $spacing-sm;
 }
 
 .pagination-btn {
-  min-width: 2rem;
-  height: 2rem;
-  padding: 0 0.5rem;
+  min-width: $size-4;
+  height: $size-4;
+  padding: 0 $spacing-sm;
   background-color: $bg-secondary;
   color: $text-primary;
-  border: 1px solid $border-color;
+  border: 1px solid $border-dark;
   border-radius: $border-radius;
   cursor: pointer;
   transition: $transition;
@@ -27,9 +27,9 @@
   }
 
   &.active {
-    background-color: $blue-600;
+    background-color: $primary-hover;
     color: $text-primary;
-    border-color: $blue-600;
+    border-color: $primary-hover;
   }
 
   &:disabled {
@@ -39,6 +39,6 @@
 }
 
 .pagination-ellipsis {
-  color: $gray-500;
-  padding: 0 0.25rem;
+  color: $disabled-text;
+  padding: 0 $spacing-xs;
 }

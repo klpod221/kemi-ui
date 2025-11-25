@@ -46,12 +46,12 @@ export class UiCheckbox extends LitElement {
   public validate(allValues: any = {}): string {
     if (!this.rules) return "";
 
-    // For checkbox, "required" means it must be checked
+    
     let error = "";
     if (this.rules.includes("required") && !this.checked) {
       error = "This field is required";
     } else {
-      // Pass to utility for other rules if applicable
+      
       error = validate(this.checked, this.rules, allValues);
     }
 
@@ -63,7 +63,7 @@ export class UiCheckbox extends LitElement {
   private handleChange(e: Event) {
     const target = e.target as HTMLInputElement;
     this.checked = target.checked;
-    this.indeterminate = false; // Clear indeterminate when manually checked
+    this.indeterminate = false; 
 
     this.dispatchEvent(
       new CustomEvent("change", {
@@ -118,7 +118,7 @@ export class UiCheckbox extends LitElement {
             ${this.indeterminate
               ? html`
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http:
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"
@@ -134,7 +134,7 @@ export class UiCheckbox extends LitElement {
               : this.checked
               ? html`
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http:
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"

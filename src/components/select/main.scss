@@ -11,14 +11,14 @@
 
 .label {
   display: block;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 500;
   color: $text-primary;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
 
   .required {
-    color: $red-500;
-    margin-left: 0.25rem;
+    color: $danger;
+    margin-left: $spacing-xs;
   }
 }
 
@@ -29,62 +29,60 @@
 
 .select-input {
   width: 100%;
-  padding: 0.5rem 2.5rem 0.5rem 0.75rem; // Right padding for arrow
-  border-radius: 0.5rem;
-  border: 1px solid $gray-600;
+  padding: $spacing-sm $spacing-4xl $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  border: 1px solid $border-dark;
   background-color: $bg-secondary;
   color: $text-primary;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: $font-sm;
+  line-height: $spacing-xl;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: $transition;
   outline: none;
-  appearance: none; // Hide default arrow
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 
   &:hover:not(:disabled) {
-    border-color: $gray-500;
+    border-color: $border-light;
   }
 
   &:focus {
-    border-color: $blue-500;
-    box-shadow: 0 0 0 2px rgba($blue-500, 0.2);
+    border-color: $primary;
   }
 
   &--error {
-    border-color: $red-500;
+    border-color: $danger;
 
     &:focus {
-      border-color: $red-400;
-      box-shadow: 0 0 0 1px $red-400;
+      border-color: $danger-light;
     }
   }
 
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    background-color: $gray-700;
+    background-color: $border-light;
   }
 }
 
 .arrow-icon {
   position: absolute;
-  right: 0.75rem;
+  right: $spacing-md;
   top: 50%;
   transform: translateY(-50%);
   color: $text-secondary;
-  pointer-events: none; // Allow clicks to pass through to select
+  pointer-events: none;
 }
 
 .helper-text {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
   color: $text-secondary;
 }
 
 .error-message {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  color: $red-400;
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
+  color: $danger-light;
 }

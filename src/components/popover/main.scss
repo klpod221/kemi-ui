@@ -16,10 +16,9 @@
 .popover {
   position: absolute;
   background-color: $bg-secondary;
-  border: 1px solid $border-color;
+  border: 1px solid $border-dark;
   border-radius: $border-radius;
-  padding: 0.75rem;
-  box-shadow: 0 4px 6px -1px $shadow-md;
+  padding: $spacing-md;
   z-index: 1000;
   min-width: 150px;
   max-width: 300px;
@@ -34,7 +33,7 @@
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      border-top-color: $gray-800;
+      border-top-color: $bg-tertiary;
     }
   }
 
@@ -47,7 +46,7 @@
       bottom: 100%;
       left: 50%;
       transform: translateX(-50%);
-      border-bottom-color: $gray-800;
+      border-bottom-color: $bg-tertiary;
     }
   }
 
@@ -60,7 +59,7 @@
       left: 100%;
       top: 50%;
       transform: translateY(-50%);
-      border-left-color: $gray-800;
+      border-left-color: $bg-tertiary;
     }
   }
 
@@ -73,21 +72,21 @@
       right: 100%;
       top: 50%;
       transform: translateY(-50%);
-      border-right-color: $gray-800;
+      border-right-color: $bg-tertiary;
     }
   }
 }
 
 .popover-title {
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
   color: $text-primary;
-  font-size: 0.875rem;
+  font-size: $font-sm;
 }
 
 .popover-content {
   color: $text-primary;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   line-height: 1.5;
 }
 

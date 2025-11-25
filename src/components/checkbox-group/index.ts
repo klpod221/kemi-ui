@@ -69,12 +69,12 @@ export class UiCheckboxGroup extends LitElement {
 
   private handleCheckboxChange(optionValue: string, checked: boolean) {
     if (checked) {
-      // Add to array if not already present
+      
       if (!this.value.includes(optionValue)) {
         this.value = [...this.value, optionValue];
       }
     } else {
-      // Remove from array
+      
       this.value = this.value.filter((v) => v !== optionValue);
     }
 
@@ -86,7 +86,7 @@ export class UiCheckboxGroup extends LitElement {
       })
     );
 
-    // Trigger validation
+    
     const form = this.closest("ui-form");
     if (form) {
       this.dispatchEvent(

@@ -10,34 +10,34 @@
 
 .label {
   display: block;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 500;
   color: $text-primary;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
 
   .required {
-    color: $red-500;
+    color: $danger;
   }
 }
 
 .colorpicker-container {
   display: flex;
-  gap: 0.5rem;
+  gap: $spacing-sm;
   align-items: center;
 }
 
 .colorpicker-swatch {
   position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.5rem;
-  border: 2px solid $gray-600;
+  width: $size-5;
+  height: $size-5;
+  border-radius: $border-radius;
+  border: 2px solid $border-light;
   cursor: pointer;
   transition: border-color 0.2s;
   overflow: hidden;
 
   &:hover {
-    border-color: $gray-500;
+    border-color: $border-light;
   }
 }
 
@@ -53,14 +53,14 @@
 
 .colorpicker-text {
   flex: 1;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid $gray-600;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  border: 1px solid $border-dark;
   background-color: $bg-secondary;
   color: $text-primary;
-  font-family: monospace;
-  font-size: 0.875rem;
-  transition: all 0.2s;
+  font-family: $font-mono;
+  font-size: $font-sm;
+  transition: $transition;
   outline: none;
   text-transform: uppercase;
 
@@ -69,13 +69,12 @@
   }
 
   &:hover:not(:disabled) {
-    border-color: $gray-500;
+    border-color: $border-light;
   }
 
   &:focus {
     outline: none;
-    border-color: $blue-500;
-    box-shadow: 0 0 0 1px $blue-500;
+    border-color: $primary;
   }
 
   &:disabled {
@@ -85,7 +84,7 @@
 }
 
 .helper-text {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
   color: $text-secondary;
 }

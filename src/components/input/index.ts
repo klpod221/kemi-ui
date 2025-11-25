@@ -50,7 +50,7 @@ export class UiInput extends LitElement {
           id: this.id,
           validate: this.validate.bind(this),
           getValue: () => this.value,
-          element: this, // Explicitly pass this element
+          element: this, 
         },
         bubbles: true,
         composed: true,
@@ -74,7 +74,7 @@ export class UiInput extends LitElement {
 
     const error = validate(this.value, this.rules, allValues);
     this._internalErrorMessage = error;
-    this.requestUpdate(); // Force update to show error
+    this.requestUpdate(); 
     return error;
   }
 
@@ -90,7 +90,7 @@ export class UiInput extends LitElement {
   private handleInput(e: Event) {
     const target = e.target as HTMLInputElement;
     this.value = target.value;
-    this.dispatchEvent(new CustomEvent("input", { detail: this.value })); // Re-emit input
+    this.dispatchEvent(new CustomEvent("input", { detail: this.value })); 
 
     if (this._touched) {
       const form = this.closest("ui-form");
@@ -134,7 +134,7 @@ export class UiInput extends LitElement {
       const form = this.closest("ui-form");
       if (form) {
         e.preventDefault();
-        // Trigger form submission
+        
         const submitButton = form.querySelector(
           'ui-button[type="submit"]'
         ) as any;
@@ -147,7 +147,7 @@ export class UiInput extends LitElement {
 
   private togglePasswordVisibility() {
     this._isPasswordVisible = !this._isPasswordVisible;
-    // Focus back on input after toggle
+    
     requestAnimationFrame(() => {
       this.inputElement?.focus();
     });
@@ -159,7 +159,7 @@ export class UiInput extends LitElement {
     const currentValue = parseFloat(this.value) || 0;
     const newValue = currentValue + step;
 
-    // Check max constraint
+    
     if (this.inputElement.max && newValue > parseFloat(this.inputElement.max))
       return;
 
@@ -173,7 +173,7 @@ export class UiInput extends LitElement {
     const currentValue = parseFloat(this.value) || 0;
     const newValue = currentValue - step;
 
-    // Check min constraint
+    
     if (this.inputElement.min && newValue < parseFloat(this.inputElement.min))
       return;
 
@@ -255,7 +255,7 @@ export class UiInput extends LitElement {
                   >
                     ${this._isPasswordVisible
                       ? html`<svg
-                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns="http:
                           width="16"
                           height="16"
                           viewBox="0 0 24 24"
@@ -275,7 +275,7 @@ export class UiInput extends LitElement {
                           <line x1="2" y1="2" x2="22" y2="22" />
                         </svg>`
                       : html`<svg
-                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns="http:
                           width="16"
                           height="16"
                           viewBox="0 0 24 24"
@@ -303,7 +303,7 @@ export class UiInput extends LitElement {
                       tabindex="-1"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns="http:
                         width="12"
                         height="12"
                         viewBox="0 0 24 24"
@@ -324,7 +324,7 @@ export class UiInput extends LitElement {
                       tabindex="-1"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns="http:
                         width="12"
                         height="12"
                         viewBox="0 0 24 24"

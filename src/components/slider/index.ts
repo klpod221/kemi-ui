@@ -45,8 +45,8 @@ export class UiSlider extends LitElement {
   public validate(allValues: any = {}): string {
     if (!this.rules) return "";
 
-    // Slider usually has a value, so "required" is always true unless min is > value?
-    // But let's support custom validation rules if any.
+    
+    
     const error = validate(this.value, this.rules, allValues);
     this._internalErrorMessage = error;
     this.requestUpdate();

@@ -28,7 +28,7 @@ export class UiRadio extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    // Register with form using the name as the field ID for radio groups
+    
     if (this.name) {
       this.dispatchEvent(
         new CustomEvent("ui-form-register", {
@@ -48,9 +48,9 @@ export class UiRadio extends LitElement {
   public validate(allValues: any = {}): string {
     if (!this.rules) return "";
 
-    // For radio group, value is the selected value
-    // Import validate dynamically or assume it's available globally/imported
-    // We need to import validate from utils
+    
+    
+    
     const error = validate(this.value, this.rules, allValues);
     this._internalErrorMessage = error;
     this.requestUpdate();
@@ -73,7 +73,7 @@ export class UiRadio extends LitElement {
   private handleChange(e: Event) {
     const target = e.target as HTMLInputElement;
 
-    // Uncheck all other radios with the same name
+    
     if (target.checked && this.name) {
       const radios = Array.from(
         document.querySelectorAll(`ui-radio[name="${this.name}"]`)
@@ -105,7 +105,7 @@ export class UiRadio extends LitElement {
   }
 
   private handleGroupChange(e: Event, val: string) {
-    e.stopPropagation(); // Stop individual radio change
+    e.stopPropagation(); 
     this.value = val;
     this.dispatchEvent(
       new CustomEvent("change", {
@@ -115,7 +115,7 @@ export class UiRadio extends LitElement {
       })
     );
 
-    // Trigger validation if touched
+    
     const form = this.closest("ui-form");
     if (form) {
       this.dispatchEvent(
@@ -135,7 +135,7 @@ export class UiRadio extends LitElement {
   render() {
     const errorMsg = this._internalErrorMessage || this.errorMessage;
 
-    // If options are provided, render as a group
+    
     if (this.options.length > 0) {
       return html`
         <div class="radio-group-container">
@@ -179,7 +179,7 @@ export class UiRadio extends LitElement {
       `;
     }
 
-    // Single radio render (existing logic)
+    
     const radioClasses = {
       radio: true,
       [`radio--${this.size}`]: true,

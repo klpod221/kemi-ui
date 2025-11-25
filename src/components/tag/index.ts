@@ -32,7 +32,7 @@ export class UiTag extends LitElement {
           ? html`
               <button class="tag-close" @click=${this.handleClose}>
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="http:
                   width="12"
                   height="12"
                   viewBox="0 0 24 24"

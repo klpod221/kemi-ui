@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
   animation: messageSlideIn 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -20,36 +20,35 @@
 .message-item {
   display: inline-flex;
   align-items: center;
-  padding: 0.625rem 1rem;
-  border-radius: 0.5rem;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $border-radius;
   background: $bg-secondary;
-  box-shadow: 0 4px 12px $shadow-sm;
-  border: 1px solid $border-color;
+  border: 1px solid $border-dark;
   color: $text-primary;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   pointer-events: all;
 
   &--success .message-icon {
-    color: $green-500;
+    color: $success;
   }
   &--error .message-icon {
-    color: $red-500;
+    color: $danger;
   }
   &--warning .message-icon {
-    color: $yellow-500;
+    color: $warning;
   }
   &--info .message-icon {
-    color: $blue-500;
+    color: $primary;
   }
   &--loading .message-icon {
-    color: $blue-500;
+    color: $primary;
   }
 }
 
 .message-icon {
   display: flex;
   align-items: center;
-  margin-right: 0.5rem;
+  margin-right: $spacing-sm;
 
   svg {
     display: block;

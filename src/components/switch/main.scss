@@ -12,12 +12,12 @@
 
 .label {
   display: block;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 500;
   color: $text-primary;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
   cursor: pointer;
-  line-height: 1.25rem;
+  line-height: $spacing-xl;
 }
 
 .switch-wrapper {
@@ -48,32 +48,32 @@
 .switch {
   position: relative;
   display: inline-block;
-  background-color: $gray-600;
+  background-color: $disabled-bg;
   border-radius: 100px;
   transition: background-color 0.2s ease;
   flex-shrink: 0;
 
   &--sm {
-    width: 2rem;
-    height: 1.125rem;
+    width: $size-4;
+    height: $spacing-lg;
   }
 
   &--md {
-    width: 2.5rem;
-    height: 1.375rem;
+    width: $size-5;
+    height: $spacing-xl;
   }
 
   &--lg {
-    width: 3rem;
-    height: 1.625rem;
+    width: $size-6;
+    height: $spacing-2xl;
   }
 
   &--checked {
-    background-color: $blue-500;
+    background-color: $primary;
   }
 
   &--disabled {
-    background-color: $gray-400;
+    background-color: $text-secondary;
     cursor: not-allowed;
   }
 }
@@ -85,44 +85,43 @@
   background-color: white;
   border-radius: 50%;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 3px $shadow-sm;
 
   .switch--sm & {
-    width: calc(1.125rem - 4px);
-    height: calc(1.125rem - 4px);
+    width: calc($spacing-lg - 4px);
+    height: calc($spacing-lg - 4px);
   }
 
   .switch--md & {
-    width: calc(1.375rem - 4px);
-    height: calc(1.375rem - 4px);
+    width: calc($spacing-xl - 4px);
+    height: calc($spacing-xl - 4px);
   }
 
   .switch--lg & {
-    width: calc(1.625rem - 4px);
-    height: calc(1.625rem - 4px);
+    width: calc($spacing-2xl - 4px);
+    height: calc($spacing-2xl - 4px);
   }
 
   .switch--checked.switch--sm & {
-    transform: translateX(calc(2rem - 1.125rem));
+    transform: translateX(calc($size-4 - $spacing-lg));
   }
 
   .switch--checked.switch--md & {
-    transform: translateX(calc(2.5rem - 1.375rem));
+    transform: translateX(calc($size-5 - $spacing-xl));
   }
 
   .switch--checked.switch--lg & {
-    transform: translateX(calc(3rem - 1.625rem));
+    transform: translateX(calc($size-6 - $spacing-2xl));
   }
 }
 
 .required {
-  color: $red-500;
-  margin-left: 0.25rem;
+  color: $danger;
+  margin-left: $spacing-xs;
 }
 
 .error-message {
   display: block;
-  margin-top: 0.375rem;
-  font-size: 0.75rem;
-  color: $red-500;
+  margin-top: $spacing-sm;
+  font-size: $font-xs;
+  color: $danger;
 }

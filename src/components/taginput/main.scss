@@ -10,62 +10,60 @@
 
 .label {
   display: block;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 500;
   color: $text-primary;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
 
   .required {
-    color: $red-500;
+    color: $danger;
   }
 }
 
 .taginput-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid $gray-600;
+  gap: $spacing-sm;
+  padding: $spacing-sm;
+  border-radius: $border-radius;
+  border: 1px solid $border-dark;
   background-color: $bg-secondary;
   cursor: text;
-  transition: all 0.2s;
+  transition: $transition;
 
   &:hover {
-    border-color: $gray-500;
+    border-color: $border-light;
   }
 
   &--focused {
-    border-color: $blue-500;
-    box-shadow: 0 0 0 1px $blue-500;
+    border-color: $primary;
   }
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  background-color: $blue-600;
+  gap: $spacing-xs;
+  padding: $spacing-xs $spacing-sm;
+  background-color: $primary-hover;
   color: $text-primary;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
+  border-radius: $spacing-xs;
+  font-size: $font-sm;
   line-height: 1.5;
 }
 
 .taginput-container--error {
-  border-color: $red-500;
+  border-color: $danger;
 
   &:focus-within {
-    border-color: $red-500;
-    box-shadow: 0 0 0 2px rgba($red-500, 0.2);
+    border-color: $danger;
   }
 }
 
 .error-message {
-  font-size: 0.75rem;
-  color: $red-500;
-  margin-top: 0.25rem;
+  font-size: $font-xs;
+  color: $danger;
+  margin-top: $spacing-xs;
 }
 
 .tag-remove {
@@ -101,7 +99,7 @@
   background: transparent;
   color: $text-primary;
   outline: none;
-  font-size: 0.875rem;
+  font-size: $font-sm;
 
   &::placeholder {
     color: $text-secondary;
@@ -113,7 +111,7 @@
 }
 
 .helper-text {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
   color: $text-secondary;
 }

@@ -7,7 +7,7 @@
 .checkbox-wrapper {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: $spacing-sm;
   cursor: pointer;
   user-select: none;
 }
@@ -24,10 +24,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.25rem;
-  border: 2px solid $gray-600;
+  border-radius: $spacing-xs;
+  border: 2px solid $border-light;
   background-color: $bg-secondary;
-  transition: all 0.2s;
+  transition: $transition;
   flex-shrink: 0;
 
   svg {
@@ -37,40 +37,38 @@
     transition: all 0.15s;
   }
 
-  // Sizes
   &--sm {
-    width: 0.75rem;
-    height: 0.75rem;
+    width: $spacing-md;
+    height: $spacing-md;
 
     svg {
-      width: 0.625rem;
-      height: 0.625rem;
+      width: $spacing-sm;
+      height: $spacing-sm;
     }
   }
 
   &--md {
-    width: 1rem;
-    height: 1rem;
+    width: $size-2;
+    height: $size-2;
 
     svg {
-      width: 0.75rem;
-      height: 0.75rem;
+      width: $spacing-md;
+      height: $spacing-md;
     }
   }
 
   &--lg {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: $spacing-xl;
+    height: $spacing-xl;
 
     svg {
-      width: 1rem;
-      height: 1rem;
+      width: $size-2;
+      height: $size-2;
     }
   }
 
   &--focused {
-    border-color: $blue-500;
-    box-shadow: 0 0 0 2px rgba($blue-500, 0.2);
+    border-color: $primary;
   }
 
   &--disabled {
@@ -80,13 +78,13 @@
 }
 
 .checkbox-wrapper:hover:not(:has(.checkbox--disabled)) .checkbox {
-  border-color: $gray-500;
+  border-color: $border-light;
 }
 
 .checkbox-input:checked + .checkbox,
 .checkbox-input:indeterminate + .checkbox {
-  background-color: $blue-600;
-  border-color: $blue-600;
+  background-color: $primary-hover;
+  border-color: $primary-hover;
 
   svg {
     opacity: 1;
@@ -96,23 +94,23 @@
 
 .checkbox-input:checked + .checkbox:hover,
 .checkbox-input:indeterminate + .checkbox:hover {
-  background-color: $blue-700;
-  border-color: $blue-700;
+  background-color: $primary-active;
+  border-color: $primary-active;
 }
 
 .checkbox-label {
   color: $text-primary;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   line-height: 1.5;
   transition: color 0.2s;
 
   .required {
-    color: $red-500;
+    color: $danger;
   }
 }
 
 .checkbox-wrapper:has(.checkbox--disabled) .checkbox-label {
-  color: $gray-500;
+  color: $disabled-text;
   cursor: not-allowed;
 }
 
@@ -126,12 +124,12 @@
 }
 
 .checkbox--error {
-  border-color: $red-500;
+  border-color: $danger;
 }
 
 .error-message {
-  font-size: 0.75rem;
-  color: $red-500;
-  margin-top: 0.25rem;
-  margin-left: 1.75rem; // Align with label text
+  font-size: $font-xs;
+  color: $danger;
+  margin-top: $spacing-xs;
+  margin-left: $spacing-2xl;
 }

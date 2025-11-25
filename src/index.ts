@@ -1,4 +1,4 @@
-// Components
+
 export { UiButton } from "./components/button";
 export { UiCard } from "./components/card";
 export { UiInput } from "./components/input";
@@ -40,5 +40,5 @@ export type {
   DataSourceResult,
 } from "./components/table/types";
 
-// Utilities
+
 export { validate, registerRule, setMessage } from "./utils/validators";

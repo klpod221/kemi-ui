@@ -11,13 +11,13 @@
 
 .label {
   display: block;
-  font-size: 0.875rem; // text-sm
-  font-weight: 500; // font-medium
+  font-size: $font-sm;
+  font-weight: 500;
   color: $text-primary;
-  margin-bottom: 0.5rem; // mb-2
+  margin-bottom: $spacing-sm;
 
   .required {
-    color: $red-500;
+    color: $danger;
   }
 }
 
@@ -28,13 +28,13 @@
 .input {
   display: block;
   width: 100%;
-  border-radius: 0.5rem; // rounded-lg
-  border: 1px solid $gray-600;
+  border-radius: $border-radius;
+  border: 1px solid $border-dark;
   background-color: $bg-secondary;
   color: $text-primary;
-  transition: all 0.2s;
+  transition: $transition;
   outline: none;
-  font-family: inherit;
+  font-family: $font-family;
   box-sizing: border-box;
 
   &::placeholder {
@@ -42,12 +42,11 @@
   }
 
   &:hover:not(:disabled):not(:read-only) {
-    border-color: $gray-500;
+    border-color: $border-light;
   }
 
   &:focus:not(:disabled):not(:read-only) {
-    border-color: $blue-500;
-    box-shadow: 0 0 0 1px $blue-500; // ring-blue-500
+    border-color: $primary;
   }
 
   &:disabled {
@@ -63,42 +62,37 @@
     color: $text-primary;
   }
 
-  // Sizes
   &--sm {
-    padding: 0.375rem 0.75rem; // py-1.5 px-3
-    font-size: 0.875rem; // text-sm
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-sm;
   }
 
   &--md {
-    padding: 0.5rem 0.75rem; // py-2 px-3
-    font-size: 1rem; // text-base
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-base;
   }
 
   &--lg {
-    padding: 0.75rem 0.75rem; // py-3 px-3
-    font-size: 1.125rem; // text-lg
+    padding: $spacing-md $spacing-md;
+    font-size: $font-lg;
   }
 
-  // Padding for icons
   &--has-left-icon {
-    padding-left: 2.5rem; // pl-10
+    padding-left: $spacing-4xl;
   }
 
   &--has-right-icon {
-    padding-right: 2.5rem; // pr-10
+    padding-right: $spacing-4xl;
   }
 
-  // Error state
   &--error {
-    border-color: $red-500;
+    border-color: $danger;
 
     &:focus {
-      border-color: $red-400;
-      box-shadow: 0 0 0 1px $red-400;
+      border-color: $danger-light;
     }
   }
 
-  // Hide number input spinners
   &[type="number"] {
     appearance: textfield;
     -moz-appearance: textfield;
@@ -112,7 +106,6 @@
   }
 }
 
-// Icons
 .icon-left,
 .icon-right {
   position: absolute;
@@ -127,16 +120,15 @@
 
 .icon-left {
   left: 0;
-  padding-left: 0.75rem; // pl-3
+  padding-left: $spacing-md;
 }
 
 .icon-right {
   right: 0;
-  padding-right: 0.75rem; // pr-3
-  pointer-events: auto; // Allow interaction if needed (e.g. password toggle)
+  padding-right: $spacing-md;
+  pointer-events: auto;
 }
 
-// Password toggle button
 .password-toggle {
   background: transparent;
   border: none;
@@ -168,7 +160,6 @@
   }
 }
 
-// Number input controls
 .number-controls {
   display: flex;
   flex-direction: column;
@@ -207,23 +198,22 @@
   }
 }
 
-// Helper Text & Error Message
 .helper-text {
-  margin-top: 0.25rem;
-  font-size: 0.75rem; // text-xs
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
   color: $text-secondary;
-  min-height: 1.25rem; // min-h-5
+  min-height: $spacing-xl;
 }
 
 .error-message {
-  margin-top: 0.25rem;
-  font-size: 0.75rem; // text-xs
-  color: $red-400;
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
+  color: $danger-light;
   display: flex;
   align-items: center;
-  min-height: 1.25rem; // min-h-5
+  min-height: $spacing-xl;
 
   svg {
-    margin-right: 0.25rem;
+    margin-right: $spacing-xs;
   }
 }

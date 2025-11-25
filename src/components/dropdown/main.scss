@@ -17,10 +17,9 @@
 .dropdown {
   position: absolute;
   background-color: $bg-secondary;
-  border: 1px solid $border-color;
+  border: 1px solid $border-dark;
   border-radius: $border-radius;
-  padding: 0.5rem;
-  box-shadow: 0 4px 6px -1px $shadow-md;
+  padding: $spacing-sm;
   z-index: 1000;
   min-width: 150px;
   animation: fadeSlideDown 0.2s ease;

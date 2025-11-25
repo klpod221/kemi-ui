@@ -9,13 +9,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1rem;
+  padding: $spacing-5xl $spacing-lg;
   text-align: center;
 }
 
 .empty-image {
-  margin-bottom: 1rem;
-  color: $gray-600;
+  margin-bottom: $spacing-lg;
+  color: $text-tertiary;
 
   img {
     max-width: 100%;
@@ -29,11 +29,11 @@
 }
 
 .empty-description {
-  margin: 0 0 1rem;
+  margin: 0 0 $spacing-lg;
   color: $text-secondary;
-  font-size: 0.875rem;
+  font-size: $font-sm;
 }
 
 .empty-content {
-  margin-top: 0.5rem;
+  margin-top: $spacing-sm;
 }

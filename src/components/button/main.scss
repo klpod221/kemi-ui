@@ -9,10 +9,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: inherit;
+  font-family: $font-family;
   font-weight: 500;
   cursor: pointer;
-  border: 1px solid transparent; // For outline variant
+  border: 1px solid transparent; 
   outline: none;
   transition: $transition;
   border-radius: $border-radius;
@@ -20,107 +20,86 @@
   touch-action: manipulation;
   white-space: nowrap;
 
-  // Size variants
+  
   &--sm {
-    padding: 0 0.75rem; // px-3
-    height: 2rem; // 32px
-    font-size: 0.875rem; // text-sm
-    line-height: 2rem;
+    padding: 0 $spacing-md; 
+    height: $size-4; 
+    font-size: $font-sm; 
+    line-height: $size-4;
 
     &.btn--icon-only {
       padding: 0;
-      width: 2rem;
+      width: $size-4;
     }
   }
 
   &--md {
-    padding: 0 1rem; // px-4
-    height: 2.5rem; // 40px
-    font-size: 1rem; // text-base
-    line-height: 2.5rem;
+    padding: 0 $spacing-lg; 
+    height: $size-5; 
+    font-size: $font-base; 
+    line-height: $size-5;
 
     &.btn--icon-only {
       padding: 0;
-      width: 2.5rem;
+      width: $size-5;
     }
   }
 
   &--lg {
-    padding: 0 1.25rem; // px-5
-    height: 3rem; // 48px
-    font-size: 1.125rem; // text-lg
-    line-height: 3rem;
+    padding: 0 $spacing-xl; 
+    height: $size-6; 
+    font-size: $font-lg; 
+    line-height: $size-6;
 
     &.btn--icon-only {
       padding: 0;
-      width: 3rem;
+      width: $size-6;
     }
   }
 
-  // Color variants
+  
   &--primary {
-    background-color: $blue-600;
+    background-color: $primary-hover;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
-      background-color: $blue-700;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $blue-500;
+      background-color: $primary-active;
     }
   }
 
   &--secondary {
-    background-color: $gray-600;
+    background-color: $disabled-bg;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
-      background-color: $gray-700;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $gray-500;
+      background-color: $border-light;
     }
   }
 
   &--success {
-    background-color: $green-600;
+    background-color: $success-dark;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
-      background-color: $green-700;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $green-500;
+      background-color: $success-darker;
     }
   }
 
   &--warning {
-    background-color: $yellow-600;
+    background-color: $warning-dark;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
-      background-color: $yellow-700;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $yellow-500;
+      background-color: $warning-darker;
     }
   }
 
   &--danger {
-    background-color: $red-600;
+    background-color: $danger-dark;
     color: $text-primary;
-    box-shadow: 0 1px 2px 0 $shadow-xs;
 
     &:hover:not(:disabled) {
-      background-color: $red-700;
+      background-color: $danger-darker;
     }
   }
 
@@ -129,12 +108,8 @@
     color: $text-secondary;
 
     &:hover:not(:disabled) {
-      background-color: rgba($gray-700, 0.5);
+      background-color: rgba($border-light, 0.5);
       color: $text-primary;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $gray-500;
     }
   }
 
@@ -144,16 +119,12 @@
     color: $text-primary;
 
     &:hover:not(:disabled) {
-      background-color: rgba($gray-700, 0.5);
+      background-color: rgba($border-light, 0.5);
       color: $text-primary;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $gray-500;
     }
   }
 
-  // States
+  
   &:disabled,
   &.is-loading {
     opacity: 0.5;
@@ -172,7 +143,7 @@
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin-right: 0.5rem;
+  margin-right: $spacing-sm;
 }
 
 @keyframes spin {
@@ -181,9 +152,9 @@
   }
 }
 
-// Slot handling
+
 ::slotted([slot="icon"]) {
-  margin-right: 0.5rem;
+  margin-right: $spacing-sm;
   display: inline-flex;
 }
 
@@ -192,6 +163,6 @@
 }
 
 ::slotted([slot="icon-right"]) {
-  margin-left: 0.5rem;
+  margin-left: $spacing-sm;
   display: inline-flex;
 }

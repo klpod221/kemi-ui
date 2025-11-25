@@ -16,7 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $shadow-lg;
+  background-color: $overlay-backdrop;
   backdrop-filter: blur(4px);
   animation: fadeIn 0.3s ease;
 }
@@ -28,7 +28,6 @@
   transform: translate(-50%, -50%);
   background-color: $bg-secondary;
   border-radius: $border-radius;
-  box-shadow: 0 10px 15px -3px $shadow-md;
   display: flex;
   flex-direction: column;
   max-height: 90vh;
@@ -40,13 +39,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid $gray-700;
+  padding: $spacing-lg $spacing-2xl;
+  border-bottom: 1px solid $border-light;
 }
 
 .modal-title {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: $font-lg;
   font-weight: 600;
   color: $text-primary;
 }
@@ -56,12 +55,12 @@
   border: none;
   color: $text-secondary;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: $spacing-xs;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.25rem;
-  transition: all 0.2s;
+  border-radius: $spacing-xs;
+  transition: $transition;
 
   &:hover {
     background-color: $bg-tertiary;
@@ -71,17 +70,17 @@
 
 .modal-content {
   flex: 1;
-  padding: 1.5rem;
+  padding: $spacing-2xl;
   overflow-y: auto;
   color: $text-primary;
 }
 
 .modal-footer {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid $gray-700;
+  padding: $spacing-lg $spacing-2xl;
+  border-top: 1px solid $border-light;
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
+  gap: $spacing-sm;
 }
 
 @keyframes fadeIn {
@@ -115,7 +114,7 @@
   }
 }
 
-// Closing animations
+
 :host(.closing) {
   .modal-backdrop {
     animation: fadeOut 0.3s ease;

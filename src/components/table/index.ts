@@ -46,7 +46,7 @@ export class UiTable extends LitElement {
 
   private async loadData() {
     if (this.dataSource) {
-      // Server-side data
+      
       this.loading = true;
       try {
         const result = await this.dataSource({
@@ -65,10 +65,10 @@ export class UiTable extends LitElement {
       }
       this.loading = false;
     } else {
-      // Client-side data
+      
       let filtered = [...this.data];
 
-      // Search
+      
       if (this.searchQuery) {
         filtered = filtered.filter((row) =>
           this.columns.some((col) =>
@@ -79,7 +79,7 @@ export class UiTable extends LitElement {
         );
       }
 
-      // Sort
+      
       if (this.sortField && this.sortOrder) {
         filtered.sort((a, b) => {
           const aVal = a[this.sortField!];
@@ -91,7 +91,7 @@ export class UiTable extends LitElement {
 
       this.total = filtered.length;
 
-      // Paginate
+      
       if (this.pagination) {
         const start = (this.currentPage - 1) * this.pageSize;
         const end = start + this.pageSize;
@@ -113,7 +113,7 @@ export class UiTable extends LitElement {
     if (!column.sortable) return;
 
     if (this.sortField === column.key) {
-      // Toggle sort order
+      
       this.sortOrder =
         this.sortOrder === "asc"
           ? "desc"

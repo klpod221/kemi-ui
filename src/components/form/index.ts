@@ -5,7 +5,7 @@ interface FormField {
   id: string;
   validate: (allValues: any) => string;
   getValue: () => any;
-  element?: any; // Reference to the actual input element
+  element?: any; 
 }
 
 @customElement("ui-form")
@@ -33,7 +33,7 @@ export class UiForm extends LitElement {
       this.handleValidate as EventListener
     );
 
-    // Listen for clicks on slotted submit buttons
+    
     this.addEventListener("click", this.handleClick as EventListener);
   }
 
@@ -56,7 +56,7 @@ export class UiForm extends LitElement {
 
   private handleClick(e: Event) {
     const target = e.target as any;
-    // Check if clicked element is a submit button or contains one
+    
     if (
       target &&
       (target.type === "submit" || target.tagName === "UI-BUTTON")
@@ -95,7 +95,7 @@ export class UiForm extends LitElement {
     const allValues = this.getAllValues();
     let isValid = true;
 
-    // Call markTouchedAndValidate on each input element
+    
     this.fields.forEach((field) => {
       if (
         field.element &&
@@ -106,7 +106,7 @@ export class UiForm extends LitElement {
           isValid = false;
         }
       } else {
-        // Fallback to regular validate
+        
         const error = field.validate(allValues);
         if (error) {
           isValid = false;

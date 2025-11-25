@@ -16,10 +16,10 @@ export class OverlayManager {
       return;
     }
 
-    // Get parentId from element
+    
     const parentId = element.parentId;
 
-    // If there's a parent, hide it
+    
     if (parentId) {
       const parentElement = document.querySelector(
         `${this.elementTagName}[id="${parentId}"], ui-drawer[id="${parentId}"], ui-modal[id="${parentId}"]`
@@ -28,27 +28,27 @@ export class OverlayManager {
         parentElement.isOpen = false;
       }
     } else {
-      // Close current overlay if no parent specified
+      
       const currentId = this.overlayStack[this.overlayStack.length - 1];
       if (currentId && currentId !== id) {
         this.close(currentId);
       }
     }
 
-    // Set props if provided
+    
     if (props) {
       element.props = props;
     }
 
-    // Show the overlay
+    
     element.isOpen = true;
 
-    // Add to stack if not already there
+    
     if (!this.overlayStack.includes(id)) {
       this.overlayStack.push(id);
     }
 
-    // Listen for close event
+    
     const handleClose = (e: CustomEvent) => {
       if (e.detail?.id === id) {
         this.close(id);
@@ -67,22 +67,22 @@ export class OverlayManager {
 
     const parentId = element.parentId;
 
-    // Add closing class for animation
+    
     element.classList.add("closing");
 
-    // Wait for animation to complete
+    
     setTimeout(() => {
-      // Hide the overlay
+      
       element.isOpen = false;
       element.classList.remove("closing");
 
-      // Remove from stack
+      
       const index = this.overlayStack.indexOf(id);
       if (index > -1) {
         this.overlayStack.splice(index, 1);
       }
 
-      // Reopen parent if exists
+      
       if (parentId) {
         const parentElement = document.querySelector(
           `ui-drawer[id="${parentId}"], ui-modal[id="${parentId}"]`

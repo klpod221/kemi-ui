@@ -7,7 +7,7 @@ import "prismjs/components/prism-css";
 import "prismjs/components/prism-scss";
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-bash";
-import "prismjs/components/prism-markup"; // html
+import "prismjs/components/prism-markup"; 
 import styles from "./main.scss?inline";
 
 @customElement("ui-code-display")
@@ -30,14 +30,7 @@ export class UiCodeDisplay extends LitElement {
     }
   }
 
-  private highlight() {
-    // Prism highlights automatically if we use the correct class, 
-    // but since we are in Shadow DOM, we might need to trigger it manually or just rely on innerHTML
-    // Actually, Prism.highlightElement works on an element.
-    // Or we can use Prism.highlight(text, grammar, language) to get HTML string.
-    
-    // Using Prism.highlight is safer and easier in Lit to just render the HTML.
-  }
+  private highlight() {}
 
   private getHighlightedCode() {
     const lang = Prism.languages[this.language] || Prism.languages.javascript;
@@ -73,13 +66,13 @@ export class UiCodeDisplay extends LitElement {
           <button class="code-display__copy-btn" @click=${this.handleCopy}>
             ${this._copied
               ? html`
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http:
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
                   Copied!
                 `
               : html`
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http:
                     <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
                   </svg>
                   Copy

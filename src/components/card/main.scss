@@ -12,35 +12,32 @@
   );
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0.75rem;
+  border-radius: $spacing-md;
   border: 1px solid $border-dark;
   transition: all 0.3s;
   position: relative;
-  // overflow: hidden; // Removed to allow dropdowns to overflow
+
   color: $white;
 
-  // Hover effects
   &.card--hover {
     cursor: pointer;
 
     &:hover {
       border-color: $border-dark;
-      box-shadow: 0 10px 15px -3px $shadow-xs, 0 4px 6px -2px $shadow-xs;
-      transform: translateY(-0.125rem) scale(1.02);
+      transform: translateY(-$spacing-xs) scale(1.02);
     }
   }
 
-  // Padding variants
   &--p-md {
-    padding: 1rem;
+    padding: $spacing-lg;
   }
 
   &--p-sm {
-    padding: 1.5rem;
+    padding: $spacing-2xl;
   }
 
   &--p-lg {
-    padding: 2rem; // p-8
+    padding: $spacing-3xl;
   }
 
   &--no-padding {
@@ -48,9 +45,8 @@
   }
 }
 
-// Header Section
 .card__header {
-  margin-bottom: 1.5rem; // mb-6
+  margin-bottom: $spacing-2xl;
   position: relative;
   z-index: 2;
   display: flex;
@@ -63,14 +59,13 @@
   }
 }
 
-// Icon
 .card__icon {
-  border-radius: 0.5rem; // rounded-lg
-  padding: 0.75rem; // p-3
+  border-radius: $border-radius;
+  padding: $spacing-md;
   transition: all 0.3s;
-  background-color: rgba($blue-500, 0.2); // bg-blue-500/20 default
-  color: $blue-400; // text-blue-400 default
-  margin-right: 1rem; // mr-4
+  background-color: rgba($primary, 0.2);
+  color: $primary-light;
+  margin-right: $spacing-lg;
 
   &:hover {
     transform: scale(1.05);
@@ -80,11 +75,10 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0.75rem; // mb-3
+    margin-bottom: $spacing-md;
   }
 }
 
-// Title
 .card__title-wrapper {
   flex: 1;
 
@@ -94,35 +88,33 @@
 }
 
 .card__title {
-  font-weight: 600; // font-semibold
+  font-weight: 600;
   color: $white;
   margin: 0;
 
   &--sm {
-    font-size: 1.125rem; // text-lg
+    font-size: $font-lg;
   }
 
   &--md {
-    font-size: 1.25rem; // text-xl
+    font-size: $font-xl;
   }
 
   &--lg {
-    font-size: 1.5rem; // text-2xl
+    font-size: $font-2xl;
   }
 }
 
-// Action
 .card__action {
-  margin-left: 1rem; // ml-4
+  margin-left: $spacing-lg;
 }
 
-// Content Section
 .card__content {
   position: relative;
   z-index: 2;
 
   &--spacing > ::slotted(*:not(:last-child)) {
-    margin-bottom: 0.75rem; // space-y-3
+    margin-bottom: $spacing-md;
   }
 
   &--center {
@@ -130,9 +122,8 @@
   }
 }
 
-// Footer Section
 .card__footer {
-  margin-top: 1.5rem; // mt-6
+  margin-top: $spacing-2xl;
   position: relative;
   z-index: 2;
 
@@ -141,7 +132,6 @@
   }
 }
 
-// Ripple Effect
 .card-ripple::before {
   content: "";
   position: absolute;
@@ -150,7 +140,7 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba($blue-500, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba($primary, 0.2) 0%, transparent 70%);
   transform: translate(-50%, -50%);
   transition: width 0.3s, height 0.3s;
   pointer-events: none;

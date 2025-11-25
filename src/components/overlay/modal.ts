@@ -20,7 +20,7 @@ export class UiModal extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    // Hide by default
+    
     this.style.display = "none";
   }
 
@@ -103,7 +103,7 @@ export class UiModal extends LitElement {
             ? html`
                 <button class="modal-close" @click=${this.handleClose}>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http:
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"

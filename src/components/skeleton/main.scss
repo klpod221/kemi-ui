@@ -7,23 +7,23 @@
 .skeleton-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: $spacing-sm;
 }
 
 .skeleton {
   background: linear-gradient(
     90deg,
-    $gray-800 0%,
-    $gray-700 50%,
-    $gray-800 100%
+    $bg-tertiary 0%,
+    $border-light 50%,
+    $bg-tertiary 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: $border-radius;
 
   &--text {
-    height: 1rem;
-    border-radius: 0.25rem;
+    height: $size-2;
+    border-radius: $spacing-xs;
   }
 
   &--circle {
@@ -38,7 +38,7 @@
 
 .skeleton-list-item {
   display: flex;
-  gap: 1rem;
+  gap: $spacing-lg;
   align-items: center;
 }
 

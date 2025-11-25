@@ -44,21 +44,21 @@ export class UiTagInput extends LitElement {
   public validate(allValues: any = {}): string {
     if (!this.rules) return "";
 
-    // For tag input, we might validate array length or content
-    // But standard validate utility expects string/number usually
-    // We can adapt it or just pass value if validate handles arrays (it likely doesn't fully)
-    // For "required", it should check if array is not empty.
+    
+    
+    
+    
 
     let error = "";
     if (this.rules.includes("required") && this.value.length === 0) {
-      // Manual required check for array
-      // Or we can try to use the utility if it supports it.
-      // Let's assume we need to handle it or pass a proxy value.
+      
+      
+      
       error = "This field is required";
     } else {
-      // Pass to utility for other rules if applicable, though most string rules won't apply to array
-      // We might skip other rules for now or implement custom logic.
-      // Let's just use the utility and see if it handles non-empty check for required.
+      
+      
+      
       error = validate(this.value, this.rules, allValues);
     }
 
@@ -153,7 +153,7 @@ export class UiTagInput extends LitElement {
                   ?disabled=${this.disabled}
                 >
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http:
                     width="12"
                     height="12"
                     viewBox="0 0 24 24"

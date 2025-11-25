@@ -37,7 +37,7 @@ export class UiBadge extends LitElement {
       <span
         class="badge badge--${this.variant}"
         style="${isNumeric && isShort
-          ? "border-radius: 50%; aspect-ratio: 1; padding: 0.25rem;"
+          ? "border-radius: 50%; aspect-ratio: 1; padding: var(--spacing-xs);"
           : ""}"
       >
         ${displayText}

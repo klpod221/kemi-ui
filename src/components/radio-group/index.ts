@@ -78,7 +78,7 @@ export class UiRadioGroup extends LitElement {
       })
     );
 
-    // Trigger validation
+    
     const form = this.closest("ui-form");
     if (form) {
       this.dispatchEvent(

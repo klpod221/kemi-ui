@@ -5,10 +5,10 @@ type ValidatorFunction = (
   allValues: FormValues
 ) => string;
 
-// Registry for custom validation rules
+
 const customRules: Record<string, ValidatorFunction> = {};
 
-// Registry for custom messages
+
 const customMessages: Record<string, string | ((params: string[]) => string)> =
   {};
 
@@ -66,14 +66,14 @@ export function validate(
 
     const [ruleName, ...params] = rule.split(":");
 
-    // Check custom rules first
+    
     if (customRules[ruleName]) {
       const error = customRules[ruleName](value, params, allValues);
       if (error) return error;
       continue;
     }
 
-    // Built-in rules with custom message support
+    
     let error = "";
 
     switch (ruleName) {
@@ -158,5 +158,5 @@ export function validate(
     if (error) return error;
   }
 
-  return ""; // No errors
+  return ""; 
 }

@@ -7,12 +7,12 @@
 .code-editor-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: $spacing-sm;
 }
 
 .label {
   display: block;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 500;
   color: $text-primary;
 }
@@ -21,10 +21,10 @@
   position: relative;
   border-radius: $border-radius;
   background-color: $bg-secondary;
-  border: 1px solid $border-color;
+  border: 1px solid $border-dark;
   overflow: hidden;
-  font-family: "Fira Code", "Consolas", monospace;
-  font-size: 0.875rem;
+  font-family: $font-mono;
+  font-size: $font-sm;
   line-height: 1.5;
 
   &__container {
@@ -36,16 +36,16 @@
 
   &__line-numbers {
     flex-shrink: 0;
-    padding: 1rem 0.5rem;
+    padding: $spacing-lg $spacing-sm;
     background-color: $bg-secondary;
     border-right: 1px solid rgba($white, 0.1);
     color: $text-tertiary;
     text-align: right;
-    font-family: inherit;
+    font-family: $font-family;
     font-size: inherit;
     line-height: inherit;
     user-select: none;
-    min-width: 2rem;
+    min-width: $size-4;
     overflow: hidden;
     white-space: pre;
   }
@@ -59,7 +59,7 @@
   &__textarea,
   &__pre {
     margin: 0;
-    padding: 1rem;
+    padding: $spacing-lg;
     border: none;
     width: 100%;
     height: 100%;
@@ -68,7 +68,7 @@
     white-space: pre;
     overflow-wrap: normal;
     overflow-x: auto;
-    font-family: inherit;
+    font-family: $font-family;
     font-size: inherit;
     line-height: inherit;
     tab-size: 4;
@@ -84,7 +84,7 @@
     resize: vertical;
     outline: none;
 
-    // Make text transparent but keep cursor visible
+    
     color: transparent;
     background-color: transparent;
 
@@ -101,7 +101,7 @@
     color: $text-primary;
 
     code {
-      font-family: inherit;
+      font-family: $font-family;
     }
   }
 }
@@ -109,8 +109,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: $text-primary;
-  text-shadow: none;
-  font-family: "Fira Code", "Consolas", monospace;
+  font-family: $font-mono;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -126,7 +125,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: $green-500;
+  color: $success;
 }
 .token.punctuation {
   color: $text-primary;
@@ -141,7 +140,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: $green-600;
+  color: $success-dark;
 }
 .token.selector,
 .token.attr-name,
@@ -149,7 +148,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: $yellow-600;
+  color: $warning-dark;
 }
 .token.operator,
 .token.entity,
@@ -161,16 +160,16 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: $blue-500;
+  color: $primary;
 }
 .token.function,
 .token.class-name {
-  color: $yellow-500;
+  color: $warning;
 }
 .token.regex,
 .token.important,
 .token.variable {
-  color: $red-500;
+  color: $danger;
 }
 .token.important,
 .token.bold {

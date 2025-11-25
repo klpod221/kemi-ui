@@ -10,13 +10,13 @@
 
 .label {
   display: block;
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 500;
   color: $text-primary;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
 
   .required {
-    color: $red-500;
+    color: $danger;
   }
 }
 
@@ -24,47 +24,45 @@
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: 0.5rem;
-  border: 1px solid $gray-600;
+  border-radius: $border-radius;
+  border: 1px solid $border-dark;
   background-color: $bg-secondary;
-  transition: all 0.2s;
+  transition: $transition;
 
   &:hover:not(&--disabled) {
-    border-color: $gray-500;
+    border-color: $border-light;
   }
 
   &--focused {
-    border-color: $blue-500;
-    box-shadow: 0 0 0 1px $blue-500;
+    border-color: $primary;
   }
 
   &--error {
-    border-color: $red-500;
+    border-color: $danger;
 
     &.datepicker-wrapper--focused {
-      border-color: $red-400;
-      box-shadow: 0 0 0 1px $red-400;
+      border-color: $danger-light;
     }
   }
 
   &--disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    background-color: $gray-900;
+    background-color: $bg-quaternary;
   }
 }
 
 .datepicker-input {
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: $spacing-sm $spacing-md;
   background: transparent;
   border: none;
   color: $text-primary;
-  font-family: inherit;
-  font-size: 0.875rem;
+  font-family: $font-family;
+  font-size: $font-sm;
   &::-webkit-calendar-picker-indicator {
     cursor: pointer;
-    filter: invert(1); // Invert color for dark mode
+    filter: invert(1); 
     opacity: 0.6;
     transition: opacity 0.2s;
 
@@ -79,13 +77,13 @@
 }
 
 .helper-text {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
   color: $text-secondary;
 }
 
 .error-message {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  color: $red-400;
+  margin-top: $spacing-xs;
+  font-size: $font-xs;
+  color: $danger-light;
 }

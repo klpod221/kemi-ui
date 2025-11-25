@@ -12,23 +12,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
 }
 
 .label {
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 500;
   color: var(--text-primary);
 
   .required {
-    color: $red-500;
+    color: $danger;
   }
 }
 
 .slider-value {
-  font-size: 0.875rem;
+  font-size: $font-sm;
   font-weight: 600;
-  color: $blue-500;
+  color: $primary;
 }
 
 .slider-container {
@@ -39,14 +39,14 @@
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 0.5rem;
-  border-radius: 0.25rem;
+  height: $size-1;
+  border-radius: $spacing-xs;
   background: linear-gradient(
     to right,
-    #{$blue-600} 0%,
-    #{$blue-600} var(--percentage),
-    #{$gray-700} var(--percentage),
-    #{$gray-700} 100%
+    #{$primary-hover} 0%,
+    #{$primary-hover} var(--percentage),
+    #{$border-light} var(--percentage),
+    #{$border-light} 100%
   );
   outline: none;
   transition: background 0.15s;
@@ -54,42 +54,38 @@
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: $spacing-xl;
+    height: $spacing-xl;
     border-radius: 50%;
     background: $white;
     cursor: pointer;
-    border: 2px solid $blue-600;
+    border: 2px solid $primary-hover;
     transition: all 0.15s;
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 0 4px rgba($blue-500, 0.2);
     }
 
     &:active {
       transform: scale(1.05);
-      box-shadow: 0 0 0 6px rgba($blue-500, 0.3);
     }
   }
 
   &::-moz-range-thumb {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: $spacing-xl;
+    height: $spacing-xl;
     border-radius: 50%;
     background: $white;
     cursor: pointer;
-    border: 2px solid $blue-600;
+    border: 2px solid $primary-hover;
     transition: all 0.15s;
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 0 4px rgba($blue-500, 0.2);
     }
 
     &:active {
       transform: scale(1.05);
-      box-shadow: 0 0 0 6px rgba($blue-500, 0.3);
     }
   }
 

@@ -47,7 +47,7 @@ export class UiMessageItem extends LitElement {
 
     const icons = {
       success: html`<svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http:
         width="16"
         height="16"
         viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ export class UiMessageItem extends LitElement {
         <polyline points="22 4 12 14.01 9 11.01" />
       </svg>`,
       error: html`<svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http:
         width="16"
         height="16"
         viewBox="0 0 24 24"
@@ -76,7 +76,7 @@ export class UiMessageItem extends LitElement {
         <line x1="9" y1="9" x2="15" y2="15" />
       </svg>`,
       warning: html`<svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http:
         width="16"
         height="16"
         viewBox="0 0 24 24"
@@ -93,7 +93,7 @@ export class UiMessageItem extends LitElement {
         <line x1="12" y1="17" x2="12.01" y2="17" />
       </svg>`,
       info: html`<svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http:
         width="16"
         height="16"
         viewBox="0 0 24 24"
@@ -109,7 +109,7 @@ export class UiMessageItem extends LitElement {
       </svg>`,
       loading: html`<svg
         class="animate-spin"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http:
         width="16"
         height="16"
         viewBox="0 0 24 24"

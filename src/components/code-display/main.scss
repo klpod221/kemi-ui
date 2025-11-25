@@ -9,18 +9,18 @@
   border-radius: $border-radius;
   background-color: $bg-secondary;
   overflow: hidden;
-  border: 1px solid $border-color;
+  border: 1px solid $border-dark;
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: $spacing-sm $spacing-lg;
     border-bottom: 1px solid rgba($white, 0.1);
   }
 
   &__language {
-    font-size: 0.75rem;
+    font-size: $font-xs;
     color: $text-secondary;
     text-transform: uppercase;
     font-weight: 600;
@@ -31,13 +31,13 @@
     border: none;
     color: $text-secondary;
     cursor: pointer;
-    font-size: 0.875rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    font-size: $font-sm;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $spacing-xs;
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: $spacing-sm;
 
     &:hover {
       color: $text-primary;
@@ -57,41 +57,40 @@
 
   &__line-numbers {
     flex-shrink: 0;
-    padding: 1rem 0.5rem;
+    padding: $spacing-lg $spacing-sm;
     background-color: $bg-secondary;
     border-right: 1px solid rgba($white, 0.1);
     color: $text-tertiary;
     text-align: right;
-    font-family: "Fira Code", "Consolas", monospace;
-    font-size: 0.875rem;
+    font-family: $font-mono;
+    font-size: $font-sm;
     line-height: 1.5;
     user-select: none;
-    min-width: 2rem;
+    min-width: $size-4;
     white-space: pre;
   }
 
   &__content {
     flex-grow: 1;
     margin: 0;
-    padding: 1rem;
+    padding: $spacing-lg;
     overflow-x: auto;
-    font-family: "Fira Code", "Consolas", monospace;
-    font-size: 0.875rem;
+    font-family: $font-mono;
+    font-size: $font-sm;
     line-height: 1.5;
     color: $text-primary;
 
     code {
-      font-family: inherit;
+      font-family: $font-family;
     }
   }
 }
 
-// PrismJS Theme Overrides (Simple Dark Theme)
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: $text-primary;
-  text-shadow: none;
-  font-family: "Fira Code", "Consolas", monospace;
+  font-family: $font-mono;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -107,7 +106,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: $green-500;
+  color: $success;
 }
 
 .token.punctuation {
@@ -125,7 +124,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: $green-600;
+  color: $success-dark;
 }
 
 .token.selector,
@@ -134,7 +133,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: $yellow-600;
+  color: $warning-dark;
 }
 
 .token.operator,
@@ -148,18 +147,18 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: $blue-500;
+  color: $primary;
 }
 
 .token.function,
 .token.class-name {
-  color: $yellow-500;
+  color: $warning;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: $red-500;
+  color: $danger;
 }
 
 .token.important,

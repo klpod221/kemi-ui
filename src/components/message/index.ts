@@ -9,7 +9,7 @@ class MessageManager {
       this.container = document.createElement("div");
       this.container.style.cssText = `
         position: fixed;
-        top: 1.5rem;
+        top: var(--spacing-2xl);
         left: 50%;
         transform: translateX(-50%);
         z-index: 9999;

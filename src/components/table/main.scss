@@ -5,15 +5,15 @@
 }
 
 .table-container {
-  border: 1px solid $border-color;
+  border: 1px solid $border-dark;
   border-radius: $border-radius;
   overflow: hidden;
   background-color: $bg-secondary;
 }
 
 .table-toolbar {
-  padding: 1rem;
-  border-bottom: 1px solid $gray-700;
+  padding: $spacing-lg;
+  border-bottom: 1px solid $border-light;
 }
 
 .table-wrapper {
@@ -26,14 +26,14 @@
 
   thead {
     background-color: $bg-secondary;
-    border-bottom: 2px solid $gray-700;
+    border-bottom: 2px solid $border-light;
 
     th {
-      padding: 0.75rem 1rem;
+      padding: $spacing-md $spacing-lg;
       text-align: left;
       font-weight: 600;
       color: $text-primary;
-      font-size: 0.875rem;
+      font-size: $font-sm;
       user-select: none;
 
       &.sortable {
@@ -49,11 +49,11 @@
 
   tbody {
     tr {
-      border-bottom: 1px solid $gray-700;
+      border-bottom: 1px solid $border-light;
       transition: background-color 0.2s;
 
       &:hover {
-        background-color: rgba($gray-700, 0.5);
+        background-color: rgba($border-light, 0.5);
       }
 
       &:last-child {
@@ -62,9 +62,9 @@
     }
 
     td {
-      padding: 0.75rem 1rem;
+      padding: $spacing-md $spacing-lg;
       color: $text-primary;
-      font-size: 0.875rem;
+      font-size: $font-sm;
     }
   }
 }
@@ -72,46 +72,46 @@
 .th-content {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: $spacing-sm;
 }
 
 .sort-icon {
-  font-size: 0.75rem;
-  color: $gray-500;
+  font-size: $font-xs;
+  color: $disabled-text;
 
   &.active {
-    color: $blue-500;
+    color: $primary;
   }
 }
 
 .table-footer {
-  padding: 1rem;
-  border-top: 1px solid $gray-700;
+  padding: $spacing-lg;
+  border-top: 1px solid $border-light;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: $spacing-lg;
   flex-wrap: wrap;
 }
 
 .page-size-selector {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: $spacing-sm;
   color: $text-secondary;
-  font-size: 0.875rem;
+  font-size: $font-sm;
 
   select {
-    padding: 0.25rem 0.5rem;
+    padding: $spacing-xs $spacing-sm;
     background-color: $bg-tertiary;
-    border: 1px solid $gray-600;
+    border: 1px solid $border-dark;
     border-radius: $border-radius;
     color: $text-primary;
     cursor: pointer;
 
     &:focus {
       outline: none;
-      border-color: $blue-500;
+      border-color: $primary;
     }
   }
 }

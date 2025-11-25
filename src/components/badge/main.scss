@@ -8,54 +8,54 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.125rem 0.5rem;
-  font-size: 0.75rem;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-xs;
   font-weight: 500;
   line-height: 1;
-  border-radius: 0.75rem;
+  border-radius: $border-radius;
   white-space: nowrap;
-  min-width: 1.25rem;
+  min-width: $spacing-xl;
 
   &--primary {
-    background-color: $blue-600;
+    background-color: $primary-hover;
     color: $text-primary;
   }
 
   &--success {
-    background-color: $green-600;
+    background-color: $success-dark;
     color: $text-primary;
   }
 
   &--warning {
-    background-color: $yellow-600;
-    color: $gray-900;
+    background-color: $warning-dark;
+    color: $bg-quaternary;
   }
 
   &--danger {
-    background-color: $red-600;
+    background-color: $danger-dark;
     color: $text-primary;
   }
 
   &--info {
-    background-color: $gray-600;
+    background-color: $disabled-bg;
     color: $text-primary;
   }
 
   &--dot {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: $size-1;
+    height: $size-1;
     padding: 0;
     border-radius: 50%;
     min-width: 0;
   }
 }
 
-// Make badge circular when content is short (likely a number)
+
 .badge:not(.badge--dot) {
   &:empty,
   &:has(:only-child:is(text)) {
     aspect-ratio: 1;
     border-radius: 50%;
-    padding: 0.25rem;
+    padding: $spacing-xs;
   }
 }

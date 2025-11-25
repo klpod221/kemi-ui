@@ -28,7 +28,7 @@ export class UiButton extends LitElement {
   private handleSlotChange(e: Event) {
     const slot = e.target as HTMLSlotElement;
     const nodes = slot.assignedNodes({ flatten: true });
-    // Check if there are any non-empty text nodes or element nodes
+    
     this._hasContent = nodes.some(
       (node) =>
         node.nodeType === Node.ELEMENT_NODE ||
