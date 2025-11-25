@@ -26,9 +26,10 @@
   justify-content: center;
   border-radius: 50%;
   border: 2px solid $border-color;
-  background-color: $bg-secondary;
+  background-color: $bg-primary;
   transition: $transition;
   flex-shrink: 0;
+  box-sizing: border-box;
 
   &--sm {
     width: $spacing-md;
@@ -47,6 +48,7 @@
 
   &--focused {
     border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.1);
   }
 
   &--disabled {
@@ -56,30 +58,36 @@
 }
 
 .radio-inner {
-  width: 75%;
-  height: 75%;
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
-  background-color: $text-primary;
+  background-color: $primary;
   transform: scale(0);
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $transition;
+  opacity: 0;
 }
 
 .radio-input:checked + .radio .radio-inner {
   transform: scale(1);
+  opacity: 1;
 }
 
 .radio-wrapper:hover:not(:has(.radio--disabled)) .radio {
-  border-color: $border-color;
+  border-color: $primary;
 }
 
 .radio-input:checked + .radio {
-  background-color: $primary-hover;
-  border-color: $primary-hover;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.radio-input:checked + .radio .radio-inner {
+  background-color: $bg-primary;
 }
 
 .radio-input:checked + .radio:hover {
-  background-color: $primary-active;
-  border-color: $primary-active;
+  background-color: $primary-hover;
+  border-color: $primary-hover;
 }
 
 .radio-label {

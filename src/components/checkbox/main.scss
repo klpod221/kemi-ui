@@ -26,9 +26,10 @@
   justify-content: center;
   border-radius: $spacing-xs;
   border: 2px solid $border-color;
-  background-color: $bg-secondary;
+  background-color: $bg-primary;
   transition: $transition;
   flex-shrink: 0;
+  box-sizing: border-box;
 
   svg {
     color: $text-primary;
@@ -69,6 +70,7 @@
 
   &--focused {
     border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.1);
   }
 
   &--disabled {
@@ -78,13 +80,13 @@
 }
 
 .checkbox-wrapper:hover:not(:has(.checkbox--disabled)) .checkbox {
-  border-color: $border-color;
+  border-color: $primary;
 }
 
 .checkbox-input:checked + .checkbox,
 .checkbox-input:indeterminate + .checkbox {
-  background-color: $primary-hover;
-  border-color: $primary-hover;
+  background-color: $primary;
+  border-color: $primary;
 
   svg {
     opacity: 1;
@@ -94,8 +96,8 @@
 
 .checkbox-input:checked + .checkbox:hover,
 .checkbox-input:indeterminate + .checkbox:hover {
-  background-color: $primary-active;
-  border-color: $primary-active;
+  background-color: $primary-hover;
+  border-color: $primary-hover;
 }
 
 .checkbox-label {

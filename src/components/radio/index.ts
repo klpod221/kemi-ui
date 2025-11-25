@@ -202,7 +202,7 @@ export class UiRadio extends LitElement {
           @blur=${this.handleBlur}
         />
         <div class=${classMap(radioClasses)}>
-          ${this.checked ? html`<div class="radio-inner"></div>` : ""}
+          <div class="radio-inner"></div>
         </div>
         ${this.label
           ? html`<span class="radio-label">${this.label}</span>`
