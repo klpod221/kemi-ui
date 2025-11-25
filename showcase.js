@@ -1,4 +1,4 @@
-import * as KemiUI from "./src/index.ts";
+import * as KemiUI from "https://cdn.jsdelivr.net/npm/@klpod221/kemi-ui/dist/kemi-ui.js";
 window.KemiUI = KemiUI;
 
 // Global helper functions for showcase interactions
@@ -342,19 +342,6 @@ const COMPONENTS = [
       { name: "default", defaultValue: "Button" },
       { name: "icon", defaultValue: '<i class="fa-solid fa-check"></i>' },
       { name: "icon-right", defaultValue: '<i class="fa-solid fa-arrow-right"></i>' },
-    ],
-    defaultValues: {},
-  },
-  {
-    name: "ui-icon-button",
-    description: "A button component that contains only an icon.",
-    props: [
-      { name: "icon", type: "string", defaultValue: '<i class="fa-solid fa-star"></i>' },
-      { name: "variant", type: "select", options: ["primary", "secondary", "success", "warning", "danger", "ghost", "outline"], defaultValue: "primary" },
-      { name: "size", type: "select", options: ["sm", "md", "lg"], defaultValue: "md" },
-      { name: "disabled", type: "boolean", defaultValue: false },
-      { name: "loading", type: "boolean", defaultValue: false },
-      { name: "title", type: "string", defaultValue: "" },
     ],
     defaultValues: {},
   },
@@ -1051,7 +1038,10 @@ function updateComponent() {
   // Apply properties to targetElement
   if (targetElement) {
     Object.entries(currentProps).forEach(([key, value]) => {
-      if (key === "content") return; // Content is already handled
+      // Skip content if it's meant to be innerHTML (not an attribute)
+      // Components with slots typically use content as innerHTML
+      // Components like tooltip use content as an attribute
+      if (key === "content" && !activeComponent.slots) return; // Content is innerHTML for non-slot components
 
       if (
         key === "options" ||
@@ -1121,15 +1111,16 @@ function updateComponent() {
   const attrs = [];
   Object.entries(currentProps).forEach(([key, value]) => {
     if (
-      key === "content" ||
       key === "options" ||
       key === "items" ||
       key === "columns" ||
       key === "data" ||
-      key === "keys" ||
-      key === "options"
+      key === "keys"
     )
       return;
+
+    // Skip content only for non-slot components (where content is innerHTML)
+    if (key === "content" && !activeComponent.slots) return;
 
     if (typeof value === "boolean") {
       if (value) attrs.push(key);
