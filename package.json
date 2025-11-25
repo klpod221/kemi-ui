@@ -1,7 +1,7 @@
 {
   "name": "@klpod221/kemi-ui",
   "private": false,
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "A simple, lightweight UI component library built with Lit. Provides reusable web components with dark theme, TypeScript support, and form validation utilities.",
   "author": {
     "name": "Bùi Thanh Xuân",
