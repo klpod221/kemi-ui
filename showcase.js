@@ -1,4 +1,4 @@
-import * as KemiUI from "https://cdn.jsdelivr.net/npm/@klpod221/kemi-ui/dist/kemi-ui.js";
+import * as KemiUI from "./src/index.ts";
 window.KemiUI = KemiUI;
 
 // Global helper functions for showcase interactions
