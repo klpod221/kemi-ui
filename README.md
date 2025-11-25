@@ -41,7 +41,7 @@ npm install @klpod221/kemi-ui
 ### CDN
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@klpod221/kemi-ui/dist/kemi-ui.js"></script>
+<script type="module" src="https://unpkg.com/@klpod221/kemi-ui/dist/kemi-ui.js"></script>
 ```
 
 ## 🚀 Quick Start
