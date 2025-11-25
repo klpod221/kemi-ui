@@ -36,7 +36,7 @@
 
   &__line-numbers {
     flex-shrink: 0;
-    padding: $spacing-lg $spacing-sm;
+    padding: $spacing-md $spacing-sm;
     background-color: $bg-secondary;
     border-right: 1px solid rgba($white, 0.1);
     color: $text-tertiary;
@@ -59,7 +59,7 @@
   &__textarea,
   &__pre {
     margin: 0;
-    padding: $spacing-lg;
+    padding: $spacing-md;
     border: none;
     width: 100%;
     height: 100%;
@@ -84,7 +84,6 @@
     resize: vertical;
     outline: none;
 
-    
     color: transparent;
     background-color: transparent;
 

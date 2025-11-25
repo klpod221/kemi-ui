@@ -57,7 +57,7 @@
 
   &__line-numbers {
     flex-shrink: 0;
-    padding: $spacing-lg $spacing-sm;
+    padding: $spacing-md $spacing-sm;
     background-color: $bg-secondary;
     border-right: 1px solid rgba($white, 0.1);
     color: $text-tertiary;
@@ -73,7 +73,7 @@
   &__content {
     flex-grow: 1;
     margin: 0;
-    padding: $spacing-lg;
+    padding: $spacing-md;
     overflow-x: auto;
     font-family: $font-mono;
     font-size: $font-sm;
@@ -85,7 +85,6 @@
     }
   }
 }
-
 
 code[class*="language-"],
 pre[class*="language-"] {
