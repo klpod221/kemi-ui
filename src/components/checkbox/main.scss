@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   border-radius: $spacing-xs;
-  border: 2px solid $border-light;
+  border: 2px solid $border-color;
   background-color: $bg-secondary;
   transition: $transition;
   flex-shrink: 0;
@@ -78,7 +78,7 @@
 }
 
 .checkbox-wrapper:hover:not(:has(.checkbox--disabled)) .checkbox {
-  border-color: $border-light;
+  border-color: $border-color;
 }
 
 .checkbox-input:checked + .checkbox,

@@ -21,7 +21,7 @@
   position: relative;
   border-radius: $border-radius;
   background-color: $bg-secondary;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   overflow: hidden;
   font-family: $font-mono;
   font-size: $font-sm;
@@ -39,7 +39,7 @@
     padding: $spacing-md $spacing-sm;
     background-color: $bg-secondary;
     border-right: 1px solid rgba($white, 0.1);
-    color: $text-tertiary;
+    color: $text-secondary;
     text-align: right;
     font-family: $font-family;
     font-size: inherit;

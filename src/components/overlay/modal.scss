@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: space-between;
   padding: $spacing-lg $spacing-2xl;
-  border-bottom: 1px solid $border-light;
+  border-bottom: 1px solid $border-color;
 }
 
 .modal-title {
@@ -77,7 +77,7 @@
 
 .modal-footer {
   padding: $spacing-lg $spacing-2xl;
-  border-top: 1px solid $border-light;
+  border-top: 1px solid $border-color;
   display: flex;
   justify-content: flex-end;
   gap: $spacing-sm;
@@ -113,7 +113,6 @@
     transform: translate(-50%, -50%) scale(0.9);
   }
 }
-
 
 :host(.closing) {
   .modal-backdrop {

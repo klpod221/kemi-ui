@@ -31,13 +31,13 @@
   width: $size-5;
   height: $size-5;
   border-radius: $border-radius;
-  border: 2px solid $border-light;
+  border: 2px solid $border-color;
   cursor: pointer;
   transition: border-color 0.2s;
   overflow: hidden;
 
   &:hover {
-    border-color: $border-light;
+    border-color: $border-color;
   }
 }
 
@@ -55,7 +55,7 @@
   flex: 1;
   padding: $spacing-sm $spacing-md;
   border-radius: $border-radius;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   background-color: $bg-secondary;
   color: $text-primary;
   font-family: $font-mono;
@@ -69,7 +69,7 @@
   }
 
   &:hover:not(:disabled) {
-    border-color: $border-light;
+    border-color: $border-color;
   }
 
   &:focus {

@@ -26,13 +26,13 @@
   gap: $spacing-sm;
   padding: $spacing-sm;
   border-radius: $border-radius;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   background-color: $bg-secondary;
   cursor: text;
   transition: $transition;
 
   &:hover {
-    border-color: $border-light;
+    border-color: $border-color;
   }
 
   &--focused {

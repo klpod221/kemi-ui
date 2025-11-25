@@ -29,7 +29,7 @@
   display: block;
   width: 100%;
   border-radius: $border-radius;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   background-color: $bg-secondary;
   color: $text-primary;
   transition: $transition;
@@ -42,7 +42,7 @@
   }
 
   &:hover:not(:disabled):not(:read-only) {
-    border-color: $border-light;
+    border-color: $border-color;
   }
 
   &:focus:not(:disabled):not(:read-only) {

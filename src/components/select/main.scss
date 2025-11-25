@@ -31,7 +31,7 @@
   width: 100%;
   padding: $spacing-sm $spacing-4xl $spacing-sm $spacing-md;
   border-radius: $border-radius;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   background-color: $bg-secondary;
   color: $text-primary;
   font-size: $font-sm;
@@ -44,7 +44,7 @@
   -moz-appearance: none;
 
   &:hover:not(:disabled) {
-    border-color: $border-light;
+    border-color: $border-color;
   }
 
   &:focus {
@@ -62,7 +62,7 @@
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    background-color: $border-light;
+    background-color: $border-color;
   }
 }
 

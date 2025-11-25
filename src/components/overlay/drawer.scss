@@ -62,7 +62,7 @@
   align-items: center;
   justify-content: space-between;
   padding: $spacing-lg $spacing-2xl;
-  border-bottom: 1px solid $border-light;
+  border-bottom: 1px solid $border-color;
 }
 
 .drawer-title {
@@ -99,7 +99,7 @@
 
 .drawer-footer {
   padding: $spacing-lg $spacing-2xl;
-  border-top: 1px solid $border-light;
+  border-top: 1px solid $border-color;
   display: flex;
   justify-content: flex-end;
   gap: $spacing-sm;
@@ -185,7 +185,6 @@
     transform: translateY(100%);
   }
 }
-
 
 :host(.closing) {
   .drawer-backdrop {

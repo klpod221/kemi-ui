@@ -22,7 +22,6 @@ export class UiEmpty extends LitElement {
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
-                  xmlns="http:
                   fill="currentColor"
                 >
                   <path

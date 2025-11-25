@@ -5,7 +5,7 @@
 }
 
 .table-container {
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   border-radius: $border-radius;
   overflow: hidden;
   background-color: $bg-secondary;
@@ -13,7 +13,7 @@
 
 .table-toolbar {
   padding: $spacing-lg;
-  border-bottom: 1px solid $border-light;
+  border-bottom: 1px solid $border-color;
 }
 
 .table-wrapper {
@@ -26,7 +26,7 @@
 
   thead {
     background-color: $bg-secondary;
-    border-bottom: 2px solid $border-light;
+    border-bottom: 2px solid $border-color;
 
     th {
       padding: $spacing-md $spacing-lg;
@@ -49,11 +49,11 @@
 
   tbody {
     tr {
-      border-bottom: 1px solid $border-light;
+      border-bottom: 1px solid $border-color;
       transition: background-color 0.2s;
 
       &:hover {
-        background-color: rgba($border-light, 0.5);
+        background-color: rgba($border-color, 0.5);
       }
 
       &:last-child {
@@ -86,7 +86,7 @@
 
 .table-footer {
   padding: $spacing-lg;
-  border-top: 1px solid $border-light;
+  border-top: 1px solid $border-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,7 +104,7 @@
   select {
     padding: $spacing-xs $spacing-sm;
     background-color: $bg-tertiary;
-    border: 1px solid $border-dark;
+    border: 1px solid $border-color;
     border-radius: $border-radius;
     color: $text-primary;
     cursor: pointer;

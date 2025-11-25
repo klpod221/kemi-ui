@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: $spacing-md;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   transition: all 0.3s;
   position: relative;
 
@@ -23,7 +23,7 @@
     cursor: pointer;
 
     &:hover {
-      border-color: $border-dark;
+      border-color: $border-color;
       transform: translateY(-$spacing-xs) scale(1.02);
     }
   }

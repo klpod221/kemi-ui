@@ -9,7 +9,7 @@
   border-radius: $border-radius;
   background-color: $bg-secondary;
   overflow: hidden;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
 
   &__header {
     display: flex;
@@ -60,7 +60,7 @@
     padding: $spacing-md $spacing-sm;
     background-color: $bg-secondary;
     border-right: 1px solid rgba($white, 0.1);
-    color: $text-tertiary;
+    color: $text-secondary;
     text-align: right;
     font-family: $font-mono;
     font-size: $font-sm;

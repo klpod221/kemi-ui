@@ -26,7 +26,7 @@
   flex: 1;
   padding: $spacing-md;
   border-radius: $border-radius;
-  border: 1px solid $border-dark;
+  border: 1px solid $border-color;
   background-color: $bg-secondary;
   color: $text-primary;
   font-family: $font-family;
@@ -41,7 +41,7 @@
   }
 
   &:hover:not(:disabled):not(:read-only) {
-    border-color: $border-light;
+    border-color: $border-color;
   }
 
   &:focus:not(:disabled):not(:read-only) {
@@ -65,7 +65,7 @@
   &:read-only {
     cursor: default;
     background-color: $bg-quaternary;
-    border-color: $border-dark;
+    border-color: $border-color;
   }
 }
 

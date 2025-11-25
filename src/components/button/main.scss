@@ -12,7 +12,7 @@
   font-family: $font-family;
   font-weight: 500;
   cursor: pointer;
-  border: 1px solid transparent; 
+  border: 1px solid transparent;
   outline: none;
   transition: $transition;
   border-radius: $border-radius;
@@ -20,11 +20,10 @@
   touch-action: manipulation;
   white-space: nowrap;
 
-  
   &--sm {
-    padding: 0 $spacing-md; 
-    height: $size-4; 
-    font-size: $font-sm; 
+    padding: 0 $spacing-md;
+    height: $size-4;
+    font-size: $font-sm;
     line-height: $size-4;
 
     &.btn--icon-only {
@@ -34,9 +33,9 @@
   }
 
   &--md {
-    padding: 0 $spacing-lg; 
-    height: $size-5; 
-    font-size: $font-base; 
+    padding: 0 $spacing-lg;
+    height: $size-5;
+    font-size: $font-base;
     line-height: $size-5;
 
     &.btn--icon-only {
@@ -46,9 +45,9 @@
   }
 
   &--lg {
-    padding: 0 $spacing-xl; 
-    height: $size-6; 
-    font-size: $font-lg; 
+    padding: 0 $spacing-xl;
+    height: $size-6;
+    font-size: $font-lg;
     line-height: $size-6;
 
     &.btn--icon-only {
@@ -57,7 +56,6 @@
     }
   }
 
-  
   &--primary {
     background-color: $primary-hover;
     color: $text-primary;
@@ -72,7 +70,7 @@
     color: $text-primary;
 
     &:hover:not(:disabled) {
-      background-color: $border-light;
+      background-color: $border-color;
     }
   }
 
@@ -108,23 +106,22 @@
     color: $text-secondary;
 
     &:hover:not(:disabled) {
-      background-color: rgba($border-light, 0.5);
+      background-color: rgba($border-color, 0.5);
       color: $text-primary;
     }
   }
 
   &--outline {
     background-color: transparent;
-    border-color: $border-light;
+    border-color: $border-color;
     color: $text-primary;
 
     &:hover:not(:disabled) {
-      background-color: rgba($border-light, 0.5);
+      background-color: rgba($border-color, 0.5);
       color: $text-primary;
     }
   }
 
-  
   &:disabled,
   &.is-loading {
     opacity: 0.5;
@@ -151,7 +148,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 ::slotted([slot="icon"]) {
   margin-right: $spacing-sm;

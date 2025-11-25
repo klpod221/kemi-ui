@@ -45,8 +45,8 @@
     to right,
     #{$primary-hover} 0%,
     #{$primary-hover} var(--percentage),
-    #{$border-light} var(--percentage),
-    #{$border-light} 100%
+    #{$border-color} var(--percentage),
+    #{$border-color} 100%
   );
   outline: none;
   transition: background 0.15s;
