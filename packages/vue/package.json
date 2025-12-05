@@ -1,6 +1,6 @@
 {
   "name": "@klpod221/kemi-ui-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue 3 wrapper for Kemi UI web components library",
   "author": {
     "name": "Bùi Thanh Xuân",
@@ -46,7 +46,7 @@
     "vue": "^3.3.0"
   },
   "dependencies": {
-    "@klpod221/kemi-ui": "^1.0.3"
+    "@klpod221/kemi-ui": "^1.0.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",

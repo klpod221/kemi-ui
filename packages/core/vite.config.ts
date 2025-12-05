@@ -6,9 +6,17 @@ export default defineConfig({
   plugins: [dts({ insertTypesEntry: true })],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: {
+        index: resolve(__dirname, "src/index.ts"),
+        'utils/validators': resolve(__dirname, "src/utils/validators.ts"),
+      },
       name: "KemiUI",
-      fileName: "kemi-ui",
+      fileName: (format, entryName) => {
+        if (entryName === 'utils/validators') {
+          return `utils/validators.${format === 'es' ? 'js' : 'umd.cjs'}`;
+        }
+        return `kemi-ui.${format === 'es' ? 'js' : 'umd.cjs'}`;
+      },
     },
     rollupOptions: {
       external: [],
