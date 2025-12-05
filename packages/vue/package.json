@@ -1,0 +1,59 @@
+{
+  "name": "@klpod221/kemi-ui-vue",
+  "version": "1.0.0",
+  "description": "Vue 3 wrapper for Kemi UI web components library",
+  "author": {
+    "name": "Bùi Thanh Xuân",
+    "email": "klpod221@gmail.com",
+    "url": "https://klpod221.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klpod221/kemi-ui.git",
+    "directory": "packages/vue"
+  },
+  "homepage": "https://klpod221.com/kemi-ui",
+  "keywords": [
+    "vue",
+    "vue3",
+    "ui",
+    "components",
+    "kemi-ui",
+    "web-components",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/kemi-ui-vue.umd.cjs",
+  "module": "./dist/kemi-ui-vue.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/kemi-ui-vue.js",
+      "require": "./dist/kemi-ui-vue.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "dependencies": {
+    "@klpod221/kemi-ui": "^1.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.9.3",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.0"
+  }
+}
